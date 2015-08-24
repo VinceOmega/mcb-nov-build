@@ -1,0 +1,135 @@
+
+		<div id="content">
+			<div id="section-header">
+				<h2 class="curly">Products</h2>
+			</div><!-- header -->
+			<div id="sidebar" class="pink-top grey-border left">
+				<?php foreach($productresults as $products):?>
+				<div class="sidebar-link">
+					<a href="/products/show/<?php echo $products->title_url; ?>" title="<?php echo $products->name; ?>"><?php echo $products->name; ?></a>
+				</div>
+				<div class="grey-bar"></div>
+				<?php endforeach; ?>
+			</div><!-- sidebar -->
+			<div id="products" class="right">
+				<h1 class="curly" style="margin-bottom: 15px;"><?php echo $product->name; ?></h1>
+				<div id="product-info" class="square grey-border left">
+				<a href="/env/product_images/<?php echo $product->image; ?>" class="highslide" id="hsimage" onclick="return hs.expand(this)" border="0" style="border:0px;">
+				<img src="/env/product_images/<?php echo $product->image; ?>" alt="<?php echo $product->image_alt ?>" width="250" height="220"  border="0" style="border:0px;" /></a>
+					<!--<img src="/env/product_images/<?php echo $product->image; ?>" ALT="<?php echo $product->image_alt ?>" width="250" />-->
+					<a class="enlarge" onClick="return document.getElementById('hsimage').onclick()"><img src="/env/images/enlarge.png" />Click to enlarge</a>
+				</div><!-- square -->
+				<div class="product-tabs right">
+					<div class="tab-feature">                         
+						<div class="tabs tabs-bottom">
+							<ul>
+								<li><a href="#details" title="Details" >Details</a></li>
+								<li><a href="#price" title="Price">Price</a></li>
+								<li><a href="#production_time" title="Production Time">Production Time</a></li>
+							</ul>
+							<div id="details" style="background-color:#FFFFFF;">
+								<p>Details</p>
+								<p class="detailtext" style="background-color:#FFFFFF;"><?php echo $product->description; ?></p>
+								
+							</div><!-- tabs-1 -->
+							<div id="price" width="400">
+							<table border="0">
+							  <colgroup>
+									<col width="150" />
+									<col  />
+								</colgroup>
+							  <tr>
+								<th style="text-align:left;" colspan="2">Price based on Quantity</th>
+								
+							  </tr>
+
+								<?php $c=0; 
+								$color='#EEEEEE';
+
+								foreach($productcosts as $costs):?>
+								
+								<tr style="padding-bottom:5px;">
+									<?php if($c == 0) {
+												$color='#DDDDDD';
+											} else {
+												$c = -1;
+												$color='#BBBBBB';
+											}
+										?>
+									<?php if($costs->qty_end == 0): ?>
+										<td style="background-color:<?php echo $color; ?>;"><label for="productDimensionsL" style="font-weight:normal; text-align:center;"><?php echo ''.$costs->qty_start.'+: '; ?></label></td>
+										<td style="background-color:<?php echo $color; ?>;"><strong><?php echo ''.money_format('%.2n', $costs->price).''; ?></strong></td>
+									<?php else: ?>
+										<td style="background-color:<?php echo $color; ?>;"><label for="productDimensionsL" style="font-weight:normal; text-align:center;"><?php echo $costs->qty_start.' - '.$costs->qty_end.': '; ?></label></td>
+										<td style="background-color:<?php echo $color; ?>;"><strong><?php echo money_format('%.2n', $costs->price); ?></strong></td>
+				   
+									<?php endif; ?>
+
+
+								</tr>
+								<?php $c++; ?>
+								<?php endforeach; ?>
+							</table>
+							</div><!-- tabs-2-->
+							<div id="production_time">
+								<?php echo $product->production_times; ?>
+              
+									<!--
+										<p>Production Time:</p>
+										<p class="detailtext">2-3 business days does not include shipping time</p>
+										<p class="detailtext">RUSH ORDERS AVAILABLE</p>
+										<p class="detailtext">call 1-866-230-7730</p>
+
+										-->
+							
+                </div><!-- tabs-3 -->
+              
+						</div><!-- tabs div -->
+					</div><!-- tab-feature div -->
+				</div><!-- product-tabs -->
+				
+        <a href="/products/build/<?php echo $product->title_url; ?>"><img style="margin-top: 10px;" class="right" src="/env/images/<?=My_Template_Controller::getViewPrefix()?>/get_started_button.png" alt="Get Started"/></a> 
+				<div class="clear"></div>
+				
+				<?php if($product->id != 1): ?>
+					<h4 class="curly">Recently Ordered</h4>
+					<div id="recently" class="grey-border pink-corner">
+<?						if (isset($recentDesigns[0])) { ?>
+						<img class="left" src="<?=$recentDesigns[0]->designpath?>" />
+<?						} else { ?>
+						<img class="left" src="/env/images/merry_christmas.png" />
+<?						} ?>
+<?						if (isset($recentDesigns[1])) { ?>
+						<img class="left" src="<?=$recentDesigns[1]->designpath?>" />
+<?						} else { ?>
+						<img class="left" src="/env/images/happy_anniversary.png" />
+<?						} ?>
+<?						if (isset($recentDesigns[2])) { ?>
+						<img class="left" src="<?=$recentDesigns[2]->designpath?>" />
+<?						} else { ?>
+						<img class="left" src="/env/images/congrat_jason.png" />
+<?						} ?>
+					</div><!-- recently -->
+				<?php else: ?>
+					
+				<?php endif; ?>
+				
+
+
+				<h2 class="curly">Other Products</h2>
+        
+				<div id="other" class="grey-border pink-corner">
+        
+            <?php foreach($productresults as $products):?>
+                <?php if($products->name != $product->name): ?>
+      					<a href="/products/show/<?php echo $products->title_url; ?>"><img src="/env/product_images/<?php echo $products->image; ?>" alt="<?php echo $product->image_alt ?>" width="100" /></a>
+                <?php endif; ?>
+    				<?php endforeach; ?>
+				
+          
+          
+          
+          
+				</div><!-- other -->
+			</div><!-- products -->
+			<div class="spacer"></div>

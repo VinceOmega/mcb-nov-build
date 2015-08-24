@@ -1,0 +1,8 @@
+<?php defined('SYSPATH') or die('No direct script access.'); ?>
+
+2014-12-20 01:48:06 -05:00 --- error: Uncaught PHP Error: mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES) in file /var/www/mch/kohana_core/system/libraries/drivers/Database/Mysql.php on line 61
+2014-12-20 01:48:31 -05:00 --- error: Uncaught PHP Error: mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES) in file /var/www/mch/kohana_core/system/libraries/drivers/Database/Mysql.php on line 61
+2014-12-20 13:20:14 -05:00 --- error: Uncaught Kohana_404_Exception: The page you requested, favicon.ico, could not be found. in file /var/www/mch/kohana_core/system/core/Kohana.php on line 841
+2014-12-20 14:38:11 -05:00 --- error: Uncaught PHP Error: mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES) in file /var/www/mch/kohana_core/system/libraries/drivers/Database/Mysql.php on line 61
+2014-12-20 16:33:35 -05:00 --- error: Uncaught PHP Error: mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES) in file /var/www/mch/kohana_core/system/libraries/drivers/Database/Mysql.php on line 61
+2014-12-20 22:10:04 -05:00 --- error: Uncaught PHP Error: mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES) in file /var/www/mch/kohana_core/system/libraries/drivers/Database/Mysql.php on line 61

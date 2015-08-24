@@ -1,0 +1,1 @@
+<?php defined('SYSPATH') OR die('No direct access allowed.');class Orders_baskets_gngoption_Model extends ORM {	protected $belongs_to = array('orders_basket');}

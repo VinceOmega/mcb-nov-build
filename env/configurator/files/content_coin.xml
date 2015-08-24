@@ -1,0 +1,2269 @@
+<data>
+	<content x="0" y="115" width="940" height="1100">
+		
+		<!-- Product preview -->
+		<rect x="5" y="23" width="930" height="317" borderColor="0xe6e6e6" borderAlpha="1.0" borderThickness="2" backgroundAlpha="0.0" />
+		<!--<borderContainer width="930" height="320" borderColor="0xe6e6e6" borderAlpha="1.0" borderThickness="2" backgroundColor="0xffffff" >-->
+			<productPreview id="product" x="5" width="930" height="320" 
+			activeTabColor="0xefd748" inactiveTabColor="0x000000" activeTextColor="0x000000" inactiveTextColor="0xffffff"
+			tabsWidth="930" tabsHeight="25" tabsCornerRadius="15"
+			previewFile="/env/configurator/preview_animation.swf" previewX="630" previewY="45" previewWidth="250" previewHeight="250"
+			handlers="orderButton">
+				<perspective id="p1" x="30" y="45" width="250" height="250" description="Side 1" tabName="Click here to edit Side 1"
+				effect="embossed"
+				backgroundColorable="/env/configurator/files/images/bg/new_colorable_coin.png"
+				backgroundColorMask="/env/configurator/files/images/bg/new_outlines_coin.png"
+				mask="/env/configurator/files/images/bg/new_coin_mask.swf"
+				handlers="topArcSide1,bottomArcSide1,topLineSide1,bottomLineSide1,imageSelector1,imageUploader1">
+					<textLine id="tlTopArc1" x="125" y="125" arcType="top" radius="95" description="Top Arc" />
+					<textLine id="tlTopLine1" x="125" y="105" arcType="none" draggable="true" selectable="true" handlers="product" description="Top Line" />
+					<textLine id="tlBottomLine1" x="125" y="145" arcType="none" draggable="true" selectable="true" handlers="product" description="Bottom Line"/>
+					<textLine id="tlBottomArc1" x="125" y="125" arcType="bottom" radius="95" handlers="product" description="Bottom Arc" />
+					<editableImage id="img1" x="125" y="125" maxWidth="150" maxHeight="150" draggable="true" selectable="true" imageMode="transparent" handlers="product" description="Image" />
+				</perspective>
+				<perspective id="p2" x="315" y="45" width="250" height="250" description="Side 2" tabName="Click here to edit Side 2*"
+				effect="embossed"
+				backgroundColorable="/env/configurator/files/images/bg/new_colorable_coin.png"
+				backgroundColorMask="/env/configurator/files/images/bg/new_outlines_coin.png"
+				mask="/env/configurator/files/images/bg/new_coin_mask.swf"
+				handlers="topArcSide2,bottomArcSide2,topLineSide2,bottomLineSide2,imageSelector2,imageUploader2">
+					<textLine id="tlTopArc2" x="125" y="125" arcType="top" radius="95" description="Top Arc" />
+					<textLine id="tlTopLine2" x="125" y="105" arcType="none" draggable="true" selectable="true" handlers="product" description="Top Line" />
+					<textLine id="tlBottomLine2" x="125" y="145" arcType="none" draggable="true" selectable="true" handlers="product" description="Bottom Line" />
+					<textLine id="tlBottomArc2" x="125" y="125" arcType="bottom" radius="95" handlers="product" description="Bottom Arc" />
+					<editableImage id="img2" x="125" y="125" maxWidth="150" maxHeight="150" draggable="true" selectable="true" imageMode="transparent" handlers="product" description="Image" />
+				</perspective>
+			</productPreview>
+			<label x="130" y="300" size="18" font="Arial" color="0x000000" ><![CDATA[<b>Side 1</b>]]></label>
+			<label x="410" y="300" size="18" font="Arial" color="0x000000" ><![CDATA[<b>Side 2</b>]]></label>
+			<label x="690" y="300" size="18" font="Arial" color="0x000000" ><![CDATA[<b><i>Diameter 1.5 in.</i></b>]]></label>
+			<label x="610" y="25" size="12" font="Arial" color="0x000000" ><![CDATA[<i>*optional, adds $29 one-time fee</i>]]></label>
+			<image x="580" y="150" >/env/configurator/files/images/your_result.gif</image>
+		<!--</borderContainer>-->
+		
+		<!-- Need help text -->
+		<borderContainer x="355" y="355" width="570" height="110" borderColor="0xe6e6e6" borderAlpha="1.0" borderThickness="2" backgroundColor="0xffffff" >
+			<label x="10" y="0" width="560" height="110" size="12" color="0x000000" align="left" ><![CDATA[<br><b>IMPORTANT NOTES</b><br>(Please read before ordering)
+1. Any imperfections in the text or clipart shown in the “Your Design” box will be fixed prior to production. You will receive an Artwork Proof. For approval.
+2. Any imperfections in the uploaded images may be fixed upon request for a nominal fee. Call for details.
+3. All designs will be engraved into the foil and chocolate.
+4. Side 2 is optional and will add a one-time fee of $29.00.
+5. By choosing a different secondary color, you will get a mixture of both foil colors at no extra charge. If you need an assortment of 3 or 4 colors, please contact us. Finally, if you want an assortment of all colors, just select the “assorted” option.
+<b>NEED HELP DESIGNING YOUR CHOCOLATE COINS?</b><br>Please call our Design Team at 1-866-230-7730 for help at no extra cost.
+<b>PRODUCTION TIME:</b><br><b>Standard:</b> 5-7 business days<br><b>Rush:</b> 2-4 business days – Call 1-866-230-7730 to arrange for a rush order.
+Production time DOES NOT include shipping time.]]></label>
+		</borderContainer>
+		
+		<!-- Customize design buttons -->
+		<label embedFonts="true" x="5" y="360" size="20" color="0x000000" font="Dutch 801 Italic Headline BT" ><![CDATA[Customize Your Design]]></label>
+		<borderContainer x="5" y="395" width="340" height="70" borderColor="0xe6e6e6" borderAlpha="1.0" borderThickness="2" backgroundColor="0xffffff" backgroundAlpha="0.0" >
+			<dataList x="0" y="0" width="340" height="70" 
+					  colWidth="45" rowHeight="45" iconWidth="45" iconHeight="45"
+					  verticalGap="0" horizontalGap="10" autoCenter="true" autoUpdate="true"
+					  autoSend="false" onlyActive="true"
+					  property="customize" handlers="tlTopLine1,tlBottomLine1,img1,tlTopLine2,tlBottomLine2,img2" >
+				<item thumb="/env/configurator/files/images/buttons/rotate_ccw.png" data="rotateCCW" />
+				<item thumb="/env/configurator/files/images/buttons/rotate_cw.png" data="rotateCW" />
+				<item thumb="/env/configurator/files/images/buttons/plus.png" data="plus" />
+				<item thumb="/env/configurator/files/images/buttons/minus.png" data="minus" />
+				<item thumb="/env/configurator/files/images/buttons/remove.png" data="remove" />
+				<item thumb="/env/configurator/files/images/buttons/update.png" data="update" />
+			</dataList>
+		</borderContainer>
+		
+		<!-- Color and chocolate type -->
+		<group x="0" y="470" width="450" height="260">
+			<step stepX="10" stepY="7" number="1" labelX="70" labelY="17" backgroundImage="/env/configurator/files/images/step_bg.png" ><![CDATA[Choose Color and Chocolate Type]]></step>
+			<borderContainer y="65" width="450" height="195" borderColor="0xe6e6e6" borderAlpha="1.0" borderThickness="2" >
+				<label x="10" y="10" size="12" font="Arial" color="0x000000" ><![CDATA[Choose your foil color. If you want a mixture of 2 colors, select an optional<br>secondary color. Select your Chocolate type as well]]></label>
+
+				<!-- color options for First Color -->
+				<colorPicker id="primaryColor" x="20" y="65" width="180" height="60" 
+						  colWidth="25" rowHeight="25" iconWidth="25" iconHeight="25" iconType="circle" shadow="true"
+						  verticalGap="5" horizontalGap="5" selectedIndex="0"
+						  handlers="p1,p2,switcher" dataObject="primaryColor" >
+					<item color="0xfde286" data="GOLD" />
+					<item color="0xe0b995" data="COPPER" />
+					<item color="0xa688ba" data="PURPLE" />
+					<item color="0x54a57b" data="GREEN" />
+					<item color="0x6879aa" data="BLUE" />
+					<item color="0xe6e6e3" data="SILVER" />
+					<item color="0xf65d5d" data="RED" />
+					<item color="0xfd7bb7" data="PINK" />
+					<item thumb="/env/configurator/files/images/colors/assorted.png" color="0xfde286,0xe0b995,0xa688ba,0x54a57b,0x6879aa,0xe6e6e3,0xf65d5d,0xfd7bb7" data="ASSORTED" />
+				</colorPicker>
+
+				<!-- color options for Second Color -->
+				<colorPicker id="secondaryColor" x="20" y="65" width="180" height="60" 
+						  colWidth="25" rowHeight="25" iconWidth="25" iconHeight="25" iconType="circle" shadow="true"
+						  verticalGap="5" horizontalGap="5" selectedIndex="8"
+						  handlers="p1,p2,switcher" dataObject="secondaryColor" >
+					<item color="0xfde286" data="GOLD" />
+					<item color="0xe0b995" data="COPPER" />
+					<item color="0xa688ba" data="PURPLE" />
+					<item color="0x54a57b" data="GREEN" />
+					<item color="0x6879aa" data="BLUE" />
+					<item color="0xe6e6e3" data="SILVER" />
+					<item color="0xf65d5d" data="RED" />
+					<item color="0xfd7bb7" data="PINK" />
+					<item color="none" data="NONE" thumb="/env/configurator/files/images/colors/no_color.png" />
+				</colorPicker>
+
+				<!-- Primary and Secondary colors text -->
+				<optionsSwitcher id="switcher" x="15" y="135" gap="0" width="180" height="45" selectedIndex="0" selectedTabColor="0xe1e2e3" backgroundTabColor="0xffffff" > <!-- f9f3af , -->
+					<item id="primaryColor" dataProperty="data" ><![CDATA[Primary Color:]]></item>
+					<item id="secondaryColor" dataProperty="data" ><![CDATA[Secondary Color:]]></item>
+				</optionsSwitcher>
+
+				<!-- Chocolate type -->
+				<label x="285" y="50" size="14" font="Arial" color="0x000000" align="center"><![CDATA[Chocolate Type]]></label>
+				<dataList x="245" y="82" width="205" height="90" 
+						  colWidth="60" rowHeight="90" iconWidth="55" iconHeight="55"
+						  verticalGap="0" horizontalGap="5" labelPosition="bottom" showSelection="true" selectedIndex="0" selectionColor="0x00dd00"
+						  property="chocolate" handlers="product" >
+					<item thumb="/env/configurator/files/images/chocolate/dark.jpg" data="2" ><![CDATA[Dark Chocolate]]></item>
+					<item thumb="/env/configurator/files/images/chocolate/milk.jpg" data="1" ><![CDATA[Milk Chocolate]]></item>
+					<item thumb="/env/configurator/files/images/chocolate/dark_mint.jpg" data="3" ><![CDATA[Dark Mint Chocolate]]></item>
+				</dataList>
+			</borderContainer>
+		</group>
+		
+		<!-- Text options -->
+		<group x="475" y="470" width="455" height="260">
+			<step stepX="10" stepY="7" number="2" labelX="70" labelY="17" backgroundImage="/env/configurator/files/images/step_bg.png" ><![CDATA[Add Your Message]]></step>
+			<borderContainer y="65" width="455" height="195" borderColor="0xe6e6e6" borderAlpha="1.0" borderThickness="2" >
+				<label x="10" y="10" size="14" font="Arial" color="0x000000" ><![CDATA[Choose text that will appear on your chocolate coin]]></label>
+				
+				<!-- text options for side 1 -->
+				<textOptions id="topArcSide1" x="10" y="40" width="440" gap="10"
+							 labelWidth="85" labelAlign="right" label="Top Arc" 
+							 maxChars="20" inputWidth="165" inputText=""
+							 minSize="20" maxSize="30" size="22"
+							 showInput="true" showFontName="true" showFontSize="true" showTextColor="false" 
+							 font="Segoe Script" fonts="Adorable,Anastasia,Angelina,Arial,ArkansasDB,Brush Script Std,Caeldera,Century Gothic,Comic Sans MS,Courier New,Elegant,Francine HMK,Georgia,Impact,Juice ITC,LegerD,Lucida Sans,Microsoft Sans Serif,Monika,Monotype Corsiva,Tahoma,Times New Roman,Trebuchet MS,Verdana" color="0x000000" 
+							 handlers="tlTopArc1" />
+				<textOptions id="topLineSide1" x="10" y="75" width="440" gap="10"
+							 labelWidth="85" labelAlign="right" label="Center-Line 1" 
+							 maxChars="20" inputWidth="165" inputText=""
+							 minSize="20" maxSize="48" size="22"
+							 showInput="true" showFontName="true" showFontSize="true" showTextColor="false" 
+							 font="Segoe Script" fonts="Adorable,Anastasia,Angelina,Arial,ArkansasDB,Brush Script Std,Caeldera,Century Gothic,Comic Sans MS,Courier New,Elegant,Francine HMK,Georgia,Impact,Juice ITC,LegerD,Lucida Sans,Microsoft Sans Serif,Monika,Monotype Corsiva,Tahoma,Times New Roman,Trebuchet MS,Verdana" color="0x000000" 
+							 handlers="tlTopLine1" />
+				<textOptions id="bottomLineSide1" x="10" y="110" width="440" gap="10"
+							 labelWidth="85" labelAlign="right" label="Center-Line 2" 
+							 maxChars="20" inputWidth="165" inputText=""
+							 minSize="20" maxSize="48" size="22"
+							 showInput="true" showFontName="true" showFontSize="true" showTextColor="false" 
+							 font="Segoe Script" fonts="Adorable,Anastasia,Angelina,Arial,ArkansasDB,Brush Script Std,Caeldera,Century Gothic,Comic Sans MS,Courier New,Elegant,Francine HMK,Georgia,Impact,Juice ITC,LegerD,Lucida Sans,Microsoft Sans Serif,Monika,Monotype Corsiva,Tahoma,Times New Roman,Trebuchet MS,Verdana" color="0x000000" 
+							 handlers="tlBottomLine1" />
+				<textOptions id="bottomArcSide1" x="10" y="145" width="440" gap="10"
+							 labelWidth="85" labelAlign="right" label="Bottom Arc" 
+							 maxChars="20" inputWidth="165" inputText=""
+							 minSize="20" maxSize="30" size="22"
+							 showInput="true" showFontName="true" showFontSize="true" showTextColor="false" 
+							 font="Segoe Script" fonts="Adorable,Anastasia,Angelina,Arial,ArkansasDB,Brush Script Std,Caeldera,Century Gothic,Comic Sans MS,Courier New,Elegant,Francine HMK,Georgia,Impact,Juice ITC,LegerD,Lucida Sans,Microsoft Sans Serif,Monika,Monotype Corsiva,Tahoma,Times New Roman,Trebuchet MS,Verdana" color="0x000000" 
+							 handlers="tlBottomArc1" />
+				
+				<!-- text options for side 2 -->
+				<textOptions id="topArcSide2" x="10" y="40" width="440" gap="10"
+							 labelWidth="85" labelAlign="right" label="Top Arc" 
+							 maxChars="20" inputWidth="165" inputText=""
+							 minSize="20" maxSize="30" size="22"
+							 showInput="true" showFontName="true" showFontSize="true" showTextColor="false" 
+							 font="Segoe Script" fonts="Adorable,Anastasia,Angelina,Arial,ArkansasDB,Brush Script Std,Caeldera,Century Gothic,Comic Sans MS,Courier New,Elegant,Francine HMK,Georgia,Impact,Juice ITC,LegerD,Lucida Sans,Microsoft Sans Serif,Monika,Monotype Corsiva,Tahoma,Times New Roman,Trebuchet MS,Verdana" color="0x000000" 
+							 handlers="tlTopArc2" />
+				<textOptions id="topLineSide2" x="10" y="75" width="440" gap="10"
+							 labelWidth="85" labelAlign="right" label="Center-Line 1" 
+							 maxChars="20" inputWidth="165" inputText=""
+							 minSize="20" maxSize="48" size="22"
+							 showInput="true" showFontName="true" showFontSize="true" showTextColor="false" 
+							 font="Segoe Script" fonts="Adorable,Anastasia,Angelina,Arial,ArkansasDB,Brush Script Std,Caeldera,Century Gothic,Comic Sans MS,Courier New,Elegant,Francine HMK,Georgia,Impact,Juice ITC,LegerD,Lucida Sans,Microsoft Sans Serif,Monika,Monotype Corsiva,Tahoma,Times New Roman,Trebuchet MS,Verdana" color="0x000000" 
+							 handlers="tlTopLine2" />
+				<textOptions id="bottomLineSide2" x="10" y="110" width="440" gap="10"
+							 labelWidth="85" labelAlign="right" label="Center-Line 2" 
+							 maxChars="20" inputWidth="165" inputText=""
+							 minSize="20" maxSize="48" size="22"
+							 showInput="true" showFontName="true" showFontSize="true" showTextColor="false" 
+							 font="Segoe Script" fonts="Adorable,Anastasia,Angelina,Arial,ArkansasDB,Brush Script Std,Caeldera,Century Gothic,Comic Sans MS,Courier New,Elegant,Francine HMK,Georgia,Impact,Juice ITC,LegerD,Lucida Sans,Microsoft Sans Serif,Monika,Monotype Corsiva,Tahoma,Times New Roman,Trebuchet MS,Verdana" color="0x000000" 
+							 handlers="tlBottomLine2" />
+				<textOptions id="bottomArcSide2" x="10" y="145" width="440" gap="10"
+							 labelWidth="85" labelAlign="right" label="Bottom Arc" 
+							 maxChars="20" inputWidth="165" inputText=""
+							 minSize="20" maxSize="30" size="22"
+							 showInput="true" showFontName="true" showFontSize="true" showTextColor="false" 
+							 font="Segoe Script" fonts="Adorable,Anastasia,Angelina,Arial,ArkansasDB,Brush Script Std,Caeldera,Century Gothic,Comic Sans MS,Courier New,Elegant,Francine HMK,Georgia,Impact,Juice ITC,LegerD,Lucida Sans,Microsoft Sans Serif,Monika,Monotype Corsiva,Tahoma,Times New Roman,Trebuchet MS,Verdana" color="0x000000" 
+							 handlers="tlBottomArc2" />
+				
+			</borderContainer>
+		</group>
+		
+		<!-- Select/Upload image block -->
+		<group x="0" y="740" width="590" height="330" >
+			<step width="590" height="75" number="3" stepX="10" stepY="7" labelX="70" labelY="17" backgroundImage="/env/configurator/files/images/step_bg.png" ><![CDATA[Add Your Image]]></step>
+			<borderContainer y="70" width="590" height="255" borderColor="0xe6e6e6" borderAlpha="1.0" borderThickness="2" >
+				<label x="10" y="10" width="400" size="14" font="Arial" color="0x000000" ><![CDATA[Add a clip art image to your coin or upload your own. Uploaded images are restricted to the following types: .jpg, .png, .gif]]></label>
+				<label x="435" y="10" width="400" size="14" font="Arial" color="0x000000" ><![CDATA[Upload your image]]></label>
+				<!-- image selector and uploader for first side -->
+				<imageSelector id="imageSelector1" x="10" y="60" width="385" height="185" colWidth="85" rowHeight="85" handlers="img1" groupTitle="Add Clipart:" groupWidth="225" >
+					<group name="Americana">
+	<item thumb="/env/configurator/files/clipArts/Americana/amr1.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr10.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr11.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr12.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr13.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr14.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr15.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr16.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr17.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr18.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr2.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr3.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr4.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr5.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr6.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr7.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr8.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr9.png" />
+</group>
+<group name="Angels">
+	<item thumb="/env/configurator/files/clipArts/Angels/ang1.png" />
+	<item thumb="/env/configurator/files/clipArts/Angels/ang2.png" />
+	<item thumb="/env/configurator/files/clipArts/Angels/ang3.png" />
+	<item thumb="/env/configurator/files/clipArts/Angels/ang4.png" />
+	<item thumb="/env/configurator/files/clipArts/Angels/ang5.png" />
+	<item thumb="/env/configurator/files/clipArts/Angels/ang6.png" />
+	<item thumb="/env/configurator/files/clipArts/Angels/ang7.png" />
+	<item thumb="/env/configurator/files/clipArts/Angels/ang8.png" />
+</group>
+<group name="Anniversary">
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann1.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann10.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann11.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann12.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann13.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann14.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann15.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann16.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann17.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann18.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN19.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann2.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN20.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN21.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN22.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN23.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann24.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann25.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann26.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann27.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann28.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN29.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann3.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN30.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN31.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN32.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann33.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann34.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann35.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN36.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN37.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann38.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann39.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann4.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann5.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann6.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann7.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann8.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann9.png" />
+</group>
+<group name="Asian">
+	<item thumb="/env/configurator/files/clipArts/Asian/asi1.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi10.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi11.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi12.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi13.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi14.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi15.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi16.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi17.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi18.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi19.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi2.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi20.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi3.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi4.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi5.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi6.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi7.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi8.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi9.png" />
+</group>
+<group name="Baby">
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-15.gif" />
+</group>
+<group name="Baby Shower">
+	<item thumb="/env/configurator/files/clipArts/Baby Shower/bbs1.png" />
+	<item thumb="/env/configurator/files/clipArts/Baby Shower/bbs2.png" />
+	<item thumb="/env/configurator/files/clipArts/Baby Shower/bbs3.png" />
+	<item thumb="/env/configurator/files/clipArts/Baby Shower/bbs4.png" />
+	<item thumb="/env/configurator/files/clipArts/Baby Shower/bbs5.png" />
+	<item thumb="/env/configurator/files/clipArts/Baby Shower/bbs6.png" />
+	<item thumb="/env/configurator/files/clipArts/Baby Shower/bbs7.png" />
+	<item thumb="/env/configurator/files/clipArts/Baby Shower/bbs8.png" />
+</group>
+<group name="Baptism">
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch1.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch10.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch11.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch12.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch13.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch14.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch15.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch16.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch17.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch18.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch19.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch2.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch20.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch21.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch22.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch23.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch24.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch25.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch3.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch4.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch5.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch6.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch7.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch8.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch9.png" />
+</group>
+<group name="Batmitzvah">
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm1.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm10.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm11.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm12.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm13.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm14.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm15.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm16.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm17.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm18.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm19.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm2.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm20.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm21.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm22.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm23.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm24.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/BBM25.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm3.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm4.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm5.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm6.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm7.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm8.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm9.png" />
+</group>
+<group name="Birds">
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-16.gif" />
+</group>
+<group name="Birthday">
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir1.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir10.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir11.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir12.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir13.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir14.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir15.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir16.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir17.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir18.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir19.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir2.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir20.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir21.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir22.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir23.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir24.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir25.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir26.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir27.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir28.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir29.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir3.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir30.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir31.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir32.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir33.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir34.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir35.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir36.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir37.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir4.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir5.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir6.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir7.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir8.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir9.png" />
+</group>
+<group name="Business">
+	<item thumb="/env/configurator/files/clipArts/Business/bus1.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus10.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus11.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus12.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus13.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus14.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus15.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus16.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus17.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus18.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus19.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus2.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus20.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus21.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus22.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus23.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus24.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus25.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus26.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus27.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus28.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus29.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus3.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus30.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus31.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus32.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus33.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus34.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus35.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus36.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus37.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus38.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus39.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus4.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus40.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus41.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus42.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus43.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus44.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus45.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus46.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus47.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus48.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus49.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus5.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus50.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus51.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus52.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus53.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus6.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus7.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus8.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus9.png" />
+</group>
+<group name="Canada">
+	<item thumb="/env/configurator/files/clipArts/Canada/ca-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Canada/ca-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Canada/ca-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Canada/ca-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Canada/ca-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Canada/ca-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Canada/ca-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Canada/ca-08.gif" />
+</group>
+<group name="Christianity">
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-16.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-17.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-18.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-19.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-20.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-21.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-22.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-23.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-24.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-25.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-26.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-27.gif" />
+</group>
+<group name="Christmas">
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr1.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr10.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr11.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr12.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr13.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr14.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr15.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr16.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr17.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr18.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr19.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr2.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr20.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr21.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr22.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr23.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr24.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr25.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr26.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr27.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr28.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr29.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr3.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr30.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr31.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr32.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr33.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr34.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr35.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr36.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr37.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr38.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr39.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr4.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr40.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr41.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr42.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr5.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr6.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr7.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr8.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr9.png" />
+</group>
+<group name="Colleges">
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-16.gif" />
+</group>
+<group name="Communion">
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm1.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm10.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm11.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm12.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm13.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm14.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm15.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm16.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm17.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm18.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm19.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm2.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm3.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm4.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm5.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm6.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm7.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm8.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm9.png" />
+</group>
+<group name="Dinosaurs">
+	<item thumb="/env/configurator/files/clipArts/Dinosaurs/din-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Dinosaurs/din-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Dinosaurs/din-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Dinosaurs/din-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Dinosaurs/din-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Dinosaurs/din-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Dinosaurs/din-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Dinosaurs/din-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Dinosaurs/din-09.gif" />
+</group>
+<group name="Drama">
+	<item thumb="/env/configurator/files/clipArts/Drama/dr-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Drama/dr-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Drama/dr-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Drama/dr-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Drama/dr-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Drama/dr-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Drama/dr-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Drama/dr-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Drama/dr-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Drama/dr-10.gif" />
+</group>
+<group name="Easter">
+	<item thumb="/env/configurator/files/clipArts/Easter/ea-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Easter/ea-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Easter/ea-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Easter/ea-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Easter/ea-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Easter/ea-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Easter/ea-07.gif" />
+</group>
+<group name="Emoticons">
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo1.png" />
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo10.png" />
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo11.png" />
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo2.png" />
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo3.png" />
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo4.png" />
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo5.png" />
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo6.png" />
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo7.png" />
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo8.png" />
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo9.png" />
+</group>
+<group name="Engagements">
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng1.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/ENG10.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng11.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng12.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng13.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng14.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng15.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng16.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng17.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng18.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng19.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng2.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng20.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng21.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng3.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng4.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng5.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng6.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng7.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng8.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng9.png" />
+</group>
+<group name="Father's Day">
+	<item thumb="/env/configurator/files/clipArts/Father's Day/fd-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Father's Day/fd-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Father's Day/fd-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Father's Day/fd-04.gif" />
+</group>
+<group name="Gaming">
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam1.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam10.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam11.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam12.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam13.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam14.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam15.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam16.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam17.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam18.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam19.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam2.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam20.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam21.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam22.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam23.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam24.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam25.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam26.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam27.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam3.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam4.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam5.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam6.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam7.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam8.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam9.png" />
+</group>
+<group name="Government">
+	<item thumb="/env/configurator/files/clipArts/Government/gv-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-16.gif" />
+</group>
+<group name="Graduation">
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd1.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd10.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd11.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd12.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd13.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd2.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd3.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd4.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd5.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd6.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd7.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd8.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd9.png" />
+</group>
+<group name="Halloween">
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-16.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-17.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-18.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-19.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-20.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-21.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-22.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-23.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-24.gif" />
+</group>
+<group name="Hanukah">
+	<item thumb="/env/configurator/files/clipArts/Hanukah/hnk1.png" />
+	<item thumb="/env/configurator/files/clipArts/Hanukah/hnk2.png" />
+	<item thumb="/env/configurator/files/clipArts/Hanukah/hnk3.png" />
+	<item thumb="/env/configurator/files/clipArts/Hanukah/hnk4.png" />
+	<item thumb="/env/configurator/files/clipArts/Hanukah/hnk5.png" />
+	<item thumb="/env/configurator/files/clipArts/Hanukah/hnk6.png" />
+</group>
+<group name="Japanese">
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-13.gif" />
+</group>
+<group name="Jewish">
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew1.png" />
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew10.png" />
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew11.png" />
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew2.png" />
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew3.png" />
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew4.png" />
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew5.png" />
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew6.png" />
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew7.png" />
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew8.png" />
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew9.png" />
+</group>
+<group name="Logos">
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-16.gif" />
+</group>
+<group name="Magic">
+	<item thumb="/env/configurator/files/clipArts/Magic/ma-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Magic/ma-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Magic/ma-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Magic/ma-04.gif" />
+</group>
+<group name="Medical">
+	<item thumb="/env/configurator/files/clipArts/Medical/med1.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med10.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med11.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med12.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med13.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med14.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med15.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med16.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med17.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med18.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med19.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med2.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med20.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med21.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med3.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med4.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med5.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med6.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med7.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med8.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med9.png" />
+</group>
+<group name="Money">
+	<item thumb="/env/configurator/files/clipArts/Money/mon-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-16.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-17.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-18.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-19.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-20.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-21.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-22.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-23.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-24.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-25.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-26.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-27.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-28.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-29.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-30.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-31.gif" />
+</group>
+<group name="Motivational">
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-16.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-17.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-18.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-19.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-20.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-21.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-22.gif" />
+</group>
+<group name="Musical">
+	<item thumb="/env/configurator/files/clipArts/Musical/mus1.png" />
+	<item thumb="/env/configurator/files/clipArts/Musical/mus10.png" />
+	<item thumb="/env/configurator/files/clipArts/Musical/mus2.png" />
+	<item thumb="/env/configurator/files/clipArts/Musical/mus3.png" />
+	<item thumb="/env/configurator/files/clipArts/Musical/mus4.png" />
+	<item thumb="/env/configurator/files/clipArts/Musical/mus5.png" />
+	<item thumb="/env/configurator/files/clipArts/Musical/mus6.png" />
+	<item thumb="/env/configurator/files/clipArts/Musical/mus7.png" />
+	<item thumb="/env/configurator/files/clipArts/Musical/mus8.png" />
+	<item thumb="/env/configurator/files/clipArts/Musical/mus9.png" />
+</group>
+<group name="Other Religions">
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-16.gif" />
+</group>
+<group name="Quinceanera">
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI1.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI10.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI11.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI12.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI13.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI14.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI15.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui16.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui17.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui18.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui19.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI2.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui20.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui21.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui22.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui23.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui24.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui25.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui26.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui27.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui28.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui29.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI3.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui30.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui31.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui32.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI4.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI5.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI6.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI7.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI8.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI9.png" />
+</group>
+<group name="Real Estate">
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-12.gif" />
+</group>
+<group name="Sports">
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-16.gif" />
+</group>
+<group name="St. Patrick's Day">
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-11.gif" />
+</group>
+<group name="St. Valantine's Day">
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd1.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd10.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd11.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd12.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd13.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd14.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd15.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd16.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd17.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd18.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd19.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd2.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd20.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd21.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd22.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd23.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd24.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd25.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd26.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd27.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd28.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd3.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd4.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd5.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd6.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd7.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd8.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd9.png" />
+</group>
+<group name="SunMoon">
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms1.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms10.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms11.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms12.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms13.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms14.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms15.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms2.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms3.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms4.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms5.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms6.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms7.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms8.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms9.png" />
+</group>
+<group name="Sweet16">
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT1.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT10.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT11.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT12.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT13.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT14.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT15.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT16.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT17.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT18.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT19.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT2.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT20.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT21.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT22.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT23.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT24.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT25.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT26.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT27.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT28.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT29.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT3.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT30.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT31.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT32.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT33.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT34.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT35.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT36.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT4.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/swt5.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT6.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT7.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT8.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT9.png" />
+</group>
+<group name="Symbols">
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-16.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-17.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-18.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-19.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-20.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-21.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-22.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-23.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-24.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-25.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-26.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-27.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-28.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-29.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-30.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-31.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-32.gif" />
+</group>
+<group name="Wedding">
+	<item thumb="/env/configurator/files/clipArts/Wedding/qui17.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/qui18.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/qui21.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/qui23.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/qui25.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/qui27.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/qui28.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed1.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed10.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed11.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed12.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed13.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed14.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed15.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed16.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed17.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed18.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed19.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed2.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed20.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed21.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed22.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed23.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed24.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed25.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed26.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed27.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed28.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed29.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed3.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed30.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed31.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed32.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed33.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed34.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed35.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed36.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed37.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed38.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/WED39.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed4.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed40.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed41.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed42.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed43.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed44.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed45.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed46.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed5.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed6.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed7.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed8.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed9.png" />
+</group>
+<group name="Zodiac">
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc1.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc10.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc11.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc12.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc13.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc14.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc15.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc16.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc17.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc18.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc19.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc2.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc20.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc21.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc22.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc23.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc24.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc3.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc4.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc5.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc6.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc7.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc8.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc9.png" />
+</group>
+				</imageSelector>
+				<imageUploader id="imageUploader1" x="440" y="130" icon="/env/configurator/files/images/add_image_icon.png" label="Add Image" handlers="img1" />
+				
+				<!-- image selector and uploader for second side -->
+				<imageSelector id="imageSelector2" x="10" y="60" width="385" height="185" colWidth="85" rowHeight="85" handlers="img2" groupTitle="Add Clipart:" groupWidth="225" >
+					<group name="Americana">
+	<item thumb="/env/configurator/files/clipArts/Americana/amr1.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr10.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr11.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr12.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr13.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr14.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr15.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr16.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr17.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr18.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr2.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr3.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr4.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr5.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr6.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr7.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr8.png" />
+	<item thumb="/env/configurator/files/clipArts/Americana/amr9.png" />
+</group>
+<group name="Angels">
+	<item thumb="/env/configurator/files/clipArts/Angels/ang1.png" />
+	<item thumb="/env/configurator/files/clipArts/Angels/ang2.png" />
+	<item thumb="/env/configurator/files/clipArts/Angels/ang3.png" />
+	<item thumb="/env/configurator/files/clipArts/Angels/ang4.png" />
+	<item thumb="/env/configurator/files/clipArts/Angels/ang5.png" />
+	<item thumb="/env/configurator/files/clipArts/Angels/ang6.png" />
+	<item thumb="/env/configurator/files/clipArts/Angels/ang7.png" />
+	<item thumb="/env/configurator/files/clipArts/Angels/ang8.png" />
+</group>
+<group name="Anniversary">
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann1.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann10.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann11.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann12.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann13.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann14.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann15.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann16.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann17.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann18.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN19.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann2.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN20.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN21.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN22.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN23.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann24.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann25.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann26.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann27.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann28.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN29.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann3.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN30.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN31.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN32.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann33.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann34.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann35.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN36.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ANN37.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann38.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann39.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann4.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann5.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann6.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann7.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann8.png" />
+	<item thumb="/env/configurator/files/clipArts/Anniversry/ann9.png" />
+</group>
+<group name="Asian">
+	<item thumb="/env/configurator/files/clipArts/Asian/asi1.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi10.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi11.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi12.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi13.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi14.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi15.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi16.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi17.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi18.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi19.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi2.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi20.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi3.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi4.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi5.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi6.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi7.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi8.png" />
+	<item thumb="/env/configurator/files/clipArts/Asian/asi9.png" />
+</group>
+<group name="Baby">
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Baby/ba-15.gif" />
+</group>
+<group name="Baby Shower">
+	<item thumb="/env/configurator/files/clipArts/Baby Shower/bbs1.png" />
+	<item thumb="/env/configurator/files/clipArts/Baby Shower/bbs2.png" />
+	<item thumb="/env/configurator/files/clipArts/Baby Shower/bbs3.png" />
+	<item thumb="/env/configurator/files/clipArts/Baby Shower/bbs4.png" />
+	<item thumb="/env/configurator/files/clipArts/Baby Shower/bbs5.png" />
+	<item thumb="/env/configurator/files/clipArts/Baby Shower/bbs6.png" />
+	<item thumb="/env/configurator/files/clipArts/Baby Shower/bbs7.png" />
+	<item thumb="/env/configurator/files/clipArts/Baby Shower/bbs8.png" />
+</group>
+<group name="Baptism">
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch1.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch10.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch11.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch12.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch13.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch14.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch15.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch16.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch17.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch18.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch19.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch2.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch20.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch21.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch22.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch23.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch24.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch25.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch3.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch4.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch5.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch6.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch7.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch8.png" />
+	<item thumb="/env/configurator/files/clipArts/Baptism/bch9.png" />
+</group>
+<group name="Batmitzvah">
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm1.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm10.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm11.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm12.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm13.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm14.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm15.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm16.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm17.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm18.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm19.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm2.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm20.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm21.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm22.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm23.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm24.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/BBM25.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm3.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm4.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm5.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm6.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm7.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm8.png" />
+	<item thumb="/env/configurator/files/clipArts/Bar-Bat/bbm9.png" />
+</group>
+<group name="Birds">
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Birds/bi-16.gif" />
+</group>
+<group name="Birthday">
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir1.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir10.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir11.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir12.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir13.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir14.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir15.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir16.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir17.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir18.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir19.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir2.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir20.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir21.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir22.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir23.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir24.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir25.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir26.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir27.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir28.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir29.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir3.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir30.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir31.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir32.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir33.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir34.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir35.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir36.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir37.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir4.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir5.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir6.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir7.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir8.png" />
+	<item thumb="/env/configurator/files/clipArts/Birthday/bir9.png" />
+</group>
+<group name="Business">
+	<item thumb="/env/configurator/files/clipArts/Business/bus1.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus10.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus11.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus12.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus13.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus14.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus15.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus16.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus17.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus18.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus19.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus2.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus20.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus21.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus22.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus23.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus24.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus25.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus26.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus27.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus28.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus29.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus3.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus30.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus31.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus32.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus33.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus34.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus35.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus36.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus37.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus38.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus39.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus4.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus40.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus41.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus42.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus43.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus44.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus45.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus46.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus47.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus48.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus49.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus5.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus50.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus51.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus52.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus53.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus6.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus7.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus8.png" />
+	<item thumb="/env/configurator/files/clipArts/Business/bus9.png" />
+</group>
+<group name="Canada">
+	<item thumb="/env/configurator/files/clipArts/Canada/ca-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Canada/ca-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Canada/ca-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Canada/ca-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Canada/ca-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Canada/ca-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Canada/ca-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Canada/ca-08.gif" />
+</group>
+<group name="Christianity">
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-16.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-17.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-18.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-19.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-20.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-21.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-22.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-23.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-24.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-25.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-26.gif" />
+	<item thumb="/env/configurator/files/clipArts/Christianity/chr-27.gif" />
+</group>
+<group name="Christmas">
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr1.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr10.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr11.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr12.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr13.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr14.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr15.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr16.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr17.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr18.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr19.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr2.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr20.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr21.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr22.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr23.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr24.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr25.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr26.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr27.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr28.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr29.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr3.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr30.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr31.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr32.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr33.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr34.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr35.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr36.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr37.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr38.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr39.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr4.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr40.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr41.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr42.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr5.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr6.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr7.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr8.png" />
+	<item thumb="/env/configurator/files/clipArts/Christmas/chr9.png" />
+</group>
+<group name="Colleges">
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Colleges/col-16.gif" />
+</group>
+<group name="Communion">
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm1.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm10.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm11.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm12.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm13.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm14.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm15.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm16.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm17.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm18.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm19.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm2.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm3.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm4.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm5.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm6.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm7.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm8.png" />
+	<item thumb="/env/configurator/files/clipArts/Communion/cmm9.png" />
+</group>
+<group name="Dinosaurs">
+	<item thumb="/env/configurator/files/clipArts/Dinosaurs/din-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Dinosaurs/din-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Dinosaurs/din-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Dinosaurs/din-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Dinosaurs/din-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Dinosaurs/din-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Dinosaurs/din-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Dinosaurs/din-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Dinosaurs/din-09.gif" />
+</group>
+<group name="Drama">
+	<item thumb="/env/configurator/files/clipArts/Drama/dr-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Drama/dr-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Drama/dr-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Drama/dr-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Drama/dr-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Drama/dr-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Drama/dr-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Drama/dr-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Drama/dr-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Drama/dr-10.gif" />
+</group>
+<group name="Easter">
+	<item thumb="/env/configurator/files/clipArts/Easter/ea-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Easter/ea-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Easter/ea-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Easter/ea-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Easter/ea-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Easter/ea-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Easter/ea-07.gif" />
+</group>
+<group name="Emoticons">
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo1.png" />
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo10.png" />
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo11.png" />
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo2.png" />
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo3.png" />
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo4.png" />
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo5.png" />
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo6.png" />
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo7.png" />
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo8.png" />
+	<item thumb="/env/configurator/files/clipArts/Emoticons/emo9.png" />
+</group>
+<group name="Engagements">
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng1.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/ENG10.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng11.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng12.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng13.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng14.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng15.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng16.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng17.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng18.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng19.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng2.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng20.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng21.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng3.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng4.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng5.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng6.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng7.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng8.png" />
+	<item thumb="/env/configurator/files/clipArts/Engagements/eng9.png" />
+</group>
+<group name="Father's Day">
+	<item thumb="/env/configurator/files/clipArts/Father's Day/fd-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Father's Day/fd-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Father's Day/fd-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Father's Day/fd-04.gif" />
+</group>
+<group name="Gaming">
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam1.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam10.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam11.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam12.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam13.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam14.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam15.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam16.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam17.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam18.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam19.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam2.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam20.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam21.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam22.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam23.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam24.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam25.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam26.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam27.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam3.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam4.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam5.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam6.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam7.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam8.png" />
+	<item thumb="/env/configurator/files/clipArts/Gaming/gam9.png" />
+</group>
+<group name="Government">
+	<item thumb="/env/configurator/files/clipArts/Government/gv-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Government/gv-16.gif" />
+</group>
+<group name="Graduation">
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd1.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd10.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd11.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd12.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd13.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd2.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd3.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd4.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd5.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd6.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd7.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd8.png" />
+	<item thumb="/env/configurator/files/clipArts/Graduation/grd9.png" />
+</group>
+<group name="Halloween">
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-16.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-17.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-18.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-19.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-20.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-21.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-22.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-23.gif" />
+	<item thumb="/env/configurator/files/clipArts/Halloween/hw-24.gif" />
+</group>
+<group name="Hanukah">
+	<item thumb="/env/configurator/files/clipArts/Hanukah/hnk1.png" />
+	<item thumb="/env/configurator/files/clipArts/Hanukah/hnk2.png" />
+	<item thumb="/env/configurator/files/clipArts/Hanukah/hnk3.png" />
+	<item thumb="/env/configurator/files/clipArts/Hanukah/hnk4.png" />
+	<item thumb="/env/configurator/files/clipArts/Hanukah/hnk5.png" />
+	<item thumb="/env/configurator/files/clipArts/Hanukah/hnk6.png" />
+</group>
+<group name="Japanese">
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Japanese/ja-13.gif" />
+</group>
+<group name="Jewish">
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew1.png" />
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew10.png" />
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew11.png" />
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew2.png" />
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew3.png" />
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew4.png" />
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew5.png" />
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew6.png" />
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew7.png" />
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew8.png" />
+	<item thumb="/env/configurator/files/clipArts/Jewish/jew9.png" />
+</group>
+<group name="Logos">
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Logos/lo-16.gif" />
+</group>
+<group name="Magic">
+	<item thumb="/env/configurator/files/clipArts/Magic/ma-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Magic/ma-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Magic/ma-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Magic/ma-04.gif" />
+</group>
+<group name="Medical">
+	<item thumb="/env/configurator/files/clipArts/Medical/med1.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med10.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med11.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med12.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med13.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med14.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med15.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med16.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med17.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med18.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med19.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med2.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med20.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med21.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med3.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med4.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med5.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med6.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med7.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med8.png" />
+	<item thumb="/env/configurator/files/clipArts/Medical/med9.png" />
+</group>
+<group name="Money">
+	<item thumb="/env/configurator/files/clipArts/Money/mon-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-16.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-17.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-18.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-19.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-20.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-21.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-22.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-23.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-24.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-25.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-26.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-27.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-28.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-29.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-30.gif" />
+	<item thumb="/env/configurator/files/clipArts/Money/mon-31.gif" />
+</group>
+<group name="Motivational">
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-16.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-17.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-18.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-19.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-20.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-21.gif" />
+	<item thumb="/env/configurator/files/clipArts/Motivational/mot-22.gif" />
+</group>
+<group name="Musical">
+	<item thumb="/env/configurator/files/clipArts/Musical/mus1.png" />
+	<item thumb="/env/configurator/files/clipArts/Musical/mus10.png" />
+	<item thumb="/env/configurator/files/clipArts/Musical/mus2.png" />
+	<item thumb="/env/configurator/files/clipArts/Musical/mus3.png" />
+	<item thumb="/env/configurator/files/clipArts/Musical/mus4.png" />
+	<item thumb="/env/configurator/files/clipArts/Musical/mus5.png" />
+	<item thumb="/env/configurator/files/clipArts/Musical/mus6.png" />
+	<item thumb="/env/configurator/files/clipArts/Musical/mus7.png" />
+	<item thumb="/env/configurator/files/clipArts/Musical/mus8.png" />
+	<item thumb="/env/configurator/files/clipArts/Musical/mus9.png" />
+</group>
+<group name="Other Religions">
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Other Religions/rel-16.gif" />
+</group>
+<group name="Quinceanera">
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI1.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI10.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI11.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI12.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI13.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI14.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI15.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui16.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui17.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui18.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui19.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI2.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui20.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui21.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui22.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui23.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui24.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui25.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui26.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui27.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui28.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui29.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI3.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui30.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui31.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/qui32.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI4.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI5.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI6.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI7.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI8.png" />
+	<item thumb="/env/configurator/files/clipArts/Quinceanera/QUI9.png" />
+</group>
+<group name="Real Estate">
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Real Estate/re-12.gif" />
+</group>
+<group name="Sports">
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Sports/sp-16.gif" />
+</group>
+<group name="St. Patrick's Day">
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/St. Patrick's Day/stp-11.gif" />
+</group>
+<group name="St. Valantine's Day">
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd1.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd10.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd11.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd12.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd13.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd14.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd15.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd16.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd17.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd18.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd19.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd2.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd20.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd21.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd22.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd23.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd24.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd25.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd26.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd27.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd28.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd3.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd4.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd5.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd6.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd7.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd8.png" />
+	<item thumb="/env/configurator/files/clipArts/StValantines/svd9.png" />
+</group>
+<group name="SunMoon">
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms1.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms10.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms11.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms12.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms13.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms14.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms15.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms2.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms3.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms4.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms5.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms6.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms7.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms8.png" />
+	<item thumb="/env/configurator/files/clipArts/SunMoon/sms9.png" />
+</group>
+<group name="Sweet16">
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT1.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT10.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT11.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT12.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT13.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT14.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT15.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT16.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT17.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT18.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT19.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT2.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT20.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT21.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT22.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT23.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT24.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT25.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT26.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT27.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT28.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT29.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT3.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT30.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT31.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT32.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT33.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT34.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT35.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT36.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT4.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/swt5.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT6.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT7.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT8.png" />
+	<item thumb="/env/configurator/files/clipArts/Sweet16/SWT9.png" />
+</group>
+<group name="Symbols">
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-01.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-02.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-03.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-04.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-05.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-06.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-07.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-08.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-09.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-10.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-11.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-12.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-13.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-14.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-15.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-16.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-17.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-18.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-19.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-20.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-21.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-22.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-23.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-24.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-25.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-26.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-27.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-28.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-29.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-30.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-31.gif" />
+	<item thumb="/env/configurator/files/clipArts/Symbols/sym-32.gif" />
+</group>
+<group name="Wedding">
+	<item thumb="/env/configurator/files/clipArts/Wedding/qui17.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/qui18.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/qui21.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/qui23.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/qui25.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/qui27.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/qui28.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed1.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed10.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed11.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed12.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed13.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed14.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed15.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed16.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed17.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed18.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed19.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed2.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed20.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed21.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed22.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed23.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed24.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed25.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed26.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed27.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed28.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed29.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed3.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed30.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed31.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed32.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed33.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed34.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed35.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed36.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed37.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed38.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/WED39.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed4.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed40.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed41.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed42.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed43.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed44.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed45.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed46.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed5.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed6.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed7.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed8.png" />
+	<item thumb="/env/configurator/files/clipArts/Wedding/wed9.png" />
+</group>
+<group name="Zodiac">
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc1.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc10.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc11.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc12.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc13.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc14.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc15.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc16.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc17.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc18.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc19.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc2.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc20.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc21.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc22.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc23.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc24.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc3.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc4.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc5.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc6.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc7.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc8.png" />
+	<item thumb="/env/configurator/files/clipArts/Zodiac/zdc9.png" />
+</group>
+				</imageSelector>
+				<imageUploader id="imageUploader2" x="440" y="130" icon="/env/configurator/files/images/add_image_icon.png" label="Add Image" handlers="img2" />
+			</borderContainer>
+		</group>
+		
+		<!-- Packaging options -->
+		<group x="615" y="740" width="315" height="330" >
+			<step width="315" height="75" number="4" stepX="8" stepY="7" labelX="70" labelY="17" backgroundImage="/env/configurator/files/images/step_bg.png" ><![CDATA[Choose Packaging<br>and Quantity]]></step>
+			<borderContainer y="70" width="315" height="255" borderColor="0xe6e6e6" borderAlpha="1.0" borderThickness="2" >
+				<image x="191" y="131" >/env/configurator/files/images/gray_angle.png</image>
+				<label x="20" y="80" size="14" width="210" ><![CDATA[Choose packaging options <br>and set quantities for your coins
+	Final pricing will be provided <br>on the next screen]]></label>
+				<image x="225" y="15" >/env/configurator/files/images/coins.png</image>
+				<linkButton id="orderButton" handlers="product" x="115" y="175" icon="/env/configurator/files/images/gold_coin_icon.png" label="Finish Your Order" link="/products/afterbuild_dynamic?id=21" dataProperty="data" />
+			</borderContainer>
+		</group>
+		
+	</content>
+</data>

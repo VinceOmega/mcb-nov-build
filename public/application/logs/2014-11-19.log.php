@@ -1,0 +1,6 @@
+<?php defined('SYSPATH') or die('No direct script access.'); ?>
+
+2014-11-19 07:09:43 -05:00 --- error: Uncaught PHP Error: mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES) in file /var/www/mch/kohana_core/system/libraries/drivers/Database/Mysql.php on line 61
+2014-11-19 08:58:32 -05:00 --- error: Uncaught PHP Error: mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES) in file /var/www/mch/kohana_core/system/libraries/drivers/Database/Mysql.php on line 61
+2014-11-19 15:44:46 -05:00 --- error: Uncaught PHP Error: mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES) in file /var/www/mch/kohana_core/system/libraries/drivers/Database/Mysql.php on line 61
+2014-11-19 16:42:08 -05:00 --- error: Uncaught PHP Error: mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES) in file /var/www/mch/kohana_core/system/libraries/drivers/Database/Mysql.php on line 61

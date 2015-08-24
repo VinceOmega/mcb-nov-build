@@ -1,0 +1,25 @@
+</div>
+<div id="product-builder">
+<center>
+	<div id="flashContent" style="display: none">
+		<a href="http://www.adobe.com/go/getflashplayer">
+			<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+		</a>
+	</div>
+	<!-- Include support librarys first -->
+	<script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+	<script>
+		var attributes = {};
+		attributes.id = "i1Content";
+		attributes.name = "i1Content";
+		var flashvars = {};
+		flashvars.fontsPath = "/env/configurator/files/fonts.xml";
+		flashvars.headerPath = "/env/configurator/files/<?=$xmlHeader.'?'.time()?>";
+		flashvars.contentPath = "/env/configurator/files/<?=$xmlContent.'?'.time()?>";
+		swfobject.embedSWF("/env/configurator/configurator.swf", "flashContent", "940", "1175", "11.4", null, flashvars, null, attributes);
+	</script>
+</center>
+</div><!-- product-builder -->
+<div id="root">
+	<div id="content" class="no-header">
+		<div class="spacer"></div>

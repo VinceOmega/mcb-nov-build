@@ -1,0 +1,35 @@
+<fonts>
+
+	<!-- if some fonts uses for text options and label, then add them only once -->
+	<!-- attribute 'name' is font alias. So we can use this alias if we don't know the REAL font name (for example, for "Dutch" alias real font name is "Dutch 801 Italic Headline BT") -->
+	
+	<!-- fonts used in text options -->
+	<font name="Adorable" path="/env/configurator/files/fonts/adorable.swf" />
+	<font name="Anastasia" path="/env/configurator/files/fonts/anastasia.swf" />
+	<font name="Angelina" path="/env/configurator/files/fonts/angelina.swf" />
+	<font name="Arial" path="/env/configurator/files/fonts/arial.swf" />
+	<font name="ArkansasDB" path="/env/configurator/files/fonts/arkansas_db.swf" />
+	<font name="Brush Script Std" path="/env/configurator/files/fonts/brush_script_std.swf" />
+	<font name="Caeldera" path="/env/configurator/files/fonts/caeldera.swf" />
+	<font name="Century Gothic" path="/env/configurator/files/fonts/century_gothic.swf" />
+	<font name="Comic Sans MS" path="/env/configurator/files/fonts/comic_sans_ms.swf" />
+	<font name="Courier New" path="/env/configurator/files/fonts/courier_new.swf" />
+	<font name="Elegant" path="/env/configurator/files/fonts/elegant_garamond.swf" />
+	<font name="Francine HMK" path="/env/configurator/files/fonts/francine_hmk.swf" />
+	<font name="Georgia" path="/env/configurator/files/fonts/georgia.swf" />
+	<font name="Impact" path="/env/configurator/files/fonts/impact.swf" />
+	<font name="Juice ITC" path="/env/configurator/files/fonts/juice_itc.swf" />
+	<font name="LegerD" path="/env/configurator/files/fonts/legerd.swf" />
+	<font name="Lucida Sans" path="/env/configurator/files/fonts/lucida_sans.swf" />
+	<font name="Microsoft Sans Serif" path="/env/configurator/files/fonts/microsoft_sans_serif.swf" />
+	<font name="Monika" path="/env/configurator/files/fonts/monika.swf" />
+	<font name="Monotype Corsiva" path="/env/configurator/files/fonts/monotype_corsiva.swf" />
+	<font name="Tahoma" path="/env/configurator/files/fonts/tahoma.swf" />
+	<font name="Times New Roman" path="/env/configurator/files/fonts/times_new_roman.swf" />
+	<font name="Trebuchet MS" path="/env/configurator/files/fonts/trebuchet_ms.swf" />
+	<font name="Verdana" path="/env/configurator/files/fonts/verdana.swf" />
+
+	
+	<!-- fonts for labels -->
+	<font name="Dutch" path="/env/configurator/files/fonts/dutch801.swf" /> 
+</fonts>

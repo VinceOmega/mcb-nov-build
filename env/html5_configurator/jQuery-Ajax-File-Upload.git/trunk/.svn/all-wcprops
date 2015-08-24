@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/Abban/jQuery-Ajax-File-Upload.git/!svn/ver/10/trunk
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/Abban/jQuery-Ajax-File-Upload.git/!svn/ver/1/trunk/LICENSE
+END
+package.json
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/Abban/jQuery-Ajax-File-Upload.git/!svn/ver/10/trunk/package.json
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/Abban/jQuery-Ajax-File-Upload.git/!svn/ver/9/trunk/.gitignore
+END
+Gruntfile.js
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/Abban/jQuery-Ajax-File-Upload.git/!svn/ver/10/trunk/Gruntfile.js
+END
+README.md
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/Abban/jQuery-Ajax-File-Upload.git/!svn/ver/8/trunk/README.md
+END
+jquery-fileupload.js
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/Abban/jQuery-Ajax-File-Upload.git/!svn/ver/9/trunk/jquery-fileupload.js
+END
+jquery-fileupload.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/Abban/jQuery-Ajax-File-Upload.git/!svn/ver/9/trunk/jquery-fileupload.min.js
+END

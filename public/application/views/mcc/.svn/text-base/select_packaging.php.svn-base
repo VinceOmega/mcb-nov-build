@@ -1,0 +1,264 @@
+		<div id="content" class="selectPackaging">
+			<div id="section-header">
+				<h2 class="curly">Choose Packaging and Quantity</h2>
+			</div><!-- header -->
+			<div class="productInfo">
+				<h2><?=$product->name?></h2>
+				<div class="image">
+<?				if (isset($basket) && $basket->designpath != '') { ?>
+					<img src="<?=$basket->designpath?>" alt="" />
+<?				} else { ?>
+					<img src="/env/product_images/<?=$product->products_description->image?>" alt="<?=$product->products_description->image_alt?>" />
+<?				} ?> 
+				</div>
+<?				
+				if (isset($basket))
+				{
+					$texts = $basket->getTextToShow();
+?>
+				<div class="basket">
+					<ul>
+						<li class="info">
+							<span class="name">Flavor:</span>
+							<span class="value"><?=$basket->flavor->name?></span>
+						</li>
+<?					foreach ($basket->orders_baskets_datas as $data)
+						if ($data->type == 'Foil') {
+							$_data = json_decode($data->data, TRUE);
+?>
+						<li class="info">
+							<span class="name"><?=$data->name?>:</span>
+							<span class="value"><?=$_data['name']?></span>
+						</li>
+<?
+						}
+					foreach ($texts as $text) { ?>
+						<li class="info text">
+							<span class="name"><?=$text->name?></span>
+							<span class="value">
+								<span style="font-size:12px; color:#<?=$text->color_hex?>; "><?=$text->text?></span>
+								(Font: <?=$text->font?>)
+							</span>
+						</li>
+<?					} ?>
+					</ul>
+				</div>
+<?				} ?>
+			</div>
+			<div class="packagings">
+				<h2>Packagings</h2>
+				<form method="POST" action="<?=$formAction?>">
+					<ul>
+<?				foreach ($product->packagings as $packaging)
+				{
+					$pricesArray = array();
+					foreach ($packaging->getPrices() as $cost) {
+						$pricesArray[] = array(
+							'start' => floatval($cost->qty_start),
+							'end'	=> floatval($cost->qty_end),
+							'price'	=> floatval($cost->price)
+						);
+					}
+					$pricesJson = json_encode($pricesArray);
+?>				
+						<li id="packagingId_<?=$packaging->id?>" 
+							class="grey-border left grey-corner"
+							data-prices='<?=$pricesJson?>'
+							data-coinsAmount="<?=$packaging->coins_amount?>">
+							<div class="image">
+								<a href="/env/packaging_images/<?=$packaging->image?>" class="highslide" id="hsimagePackaging<?=$packaging->id?>" onclick="return hs.expand(this, { src: '' })" border="0">
+									<img src="/env/packaging_images/<?=$packaging->image?>" alt="<?=$packaging->image_alt?>" style="max-width:250px;" />
+								</a>
+							</div>
+							<div class="info">
+								<h3><?=$packaging->name?></h3>
+<?/*								<span class="coins_amount">
+									Coins: <?=$packaging->coins_amount?>u.
+								</span> */ ?>
+								<span class="description">
+									<?=$packaging->description?>
+								</span>
+								<table border="0">
+									<colgroup><col width="150" /><col  /></colgroup>
+									<tr><th style="text-align:left;" colspan="2">Price based on Quantity</th></tr>
+								<?php
+								$row = 0;
+								$minAmount = FALSE;
+								foreach ($packaging->getPrices() as $cost) {
+									$color = ($row % 2)?'#DDD':'#BBB';
+									if (FALSE === $minAmount)
+										$minAmount = $cost->qty_start;
+		?>
+										<tr style="padding-bottom:5px;">
+											<td style="background:<?=$color?>;">
+												<?=$cost->qty_start.($cost->qty_end?' - '.$cost->qty_end:'+')?>:
+											</td>
+											<td style="background:<?=$color?>;">
+												<strong><?=money_format('%.2n', $cost->price)?></strong>
+											</td>
+										</tr>
+		<?
+									$row++;
+								}
+		?>
+								</table>
+							</div>
+							<div id="amountPickerId<?=$packaging->id?>" class="packagingAmountPicker" data-amount="0">
+								Choose Quantity: 
+								<a href="#" class="less">-</a>
+								<input type="text" value="0"
+									   data-id="<?=$packaging->id?>"
+									   data-minAmount="<?=$minAmount?>"
+									   name="packagings[<?=$packaging->id?>]" 
+									   onkeydown="return isNumberKey(event);"
+									   onblur="checkAmount($(this),true);"
+									   onkeyup="recalculateAmounts();checkAmount($(this),false);"/>
+								<a href="#" class="more">+</a>
+								<div class="amountError">Minimum amount is <?=$minAmount?>.</div>
+								<br /> 
+								Unit Price: 
+								<span class="packagingUnitPrice"></span>
+								<br />
+								Subtotal:
+								<span class="subtotal"></span>
+								<br />
+								<br />
+<?			
+					if ($packaging->packagingoptions)
+					{
+						foreach ($packaging->packagingoptions as $option)
+						{
+							$opt_list = explode('#',$option->values);
+?>
+								<div class="gngOption">
+									<label><?=$option->name?></label>
+									<select name="packagingoptions[<?=$packaging->id?>][<?=$option->id?>]">
+<?								foreach ($opt_list as $_opt) { ?>
+										<option><?=$_opt?></option>
+<?								} ?>
+									</select>
+								</div>
+<?
+						}
+					}
+?>
+							</div>
+						</li>
+<?
+				}
+?>
+					</ul>
+					<button type="submit"><img src="/env/images/mcc/add_to_cart_button.png" /></button>
+				</form>
+			</div>
+			
+			<div class="spacer"></div>
+<script type="text/javascript">
+	
+function isNumberKey(evt)
+{
+   var charCode = (evt.which) ? evt.which : event.keyCode
+   return charCode <= 57 && charCode != 32;
+}
+
+function money_format (price) { return '$ '+price.toFixed(2); }
+
+function moreLessPicker(amount, input)
+{
+	var value = parseInt(input.val());
+	input.val(value + amount);
+	
+	if (parseInt(input.val()) < parseInt(input.attr('data-minAmount')))
+		input.val(input.attr('data-minAmount'));
+	
+	recalculateAmounts();
+}
+
+function checkAmount(input,setMin)
+{
+	var errorDiv = $(input.parent().find('.amountError'));
+	
+	var val = parseInt(input.val());
+	if (val > 0 && val < parseInt(input.attr('data-minAmount'))) {
+		if (setMin) {
+			input.val(input.attr('data-minAmount'))
+			errorDiv.hide();
+		} else
+			errorDiv.show();
+	} else {
+		errorDiv.hide();
+	}
+	
+	recalculateAmounts();
+}
+
+function recalculateTotalCoinsAmount()
+{
+	coins_total_amount = 0;
+	$('.packagingAmountPicker input').each(function(index,input){
+		coins_total_amount += parseInt($(input).val());
+	});
+}
+
+function recalculateAmounts()
+{
+	recalculateTotalCoinsAmount();
+	
+	$('.packagingAmountPicker input').each(function(index,input){
+		input = $(input);
+		
+		var li = $('#packagingId_'+input.attr('data-id'));
+		
+		if (input.val() != 0)
+		{
+			var packagingUnitPrice = getUnitPriceForAmount(input.val(),
+														   li.attr('data-prices'));
+			var subtotal = packagingUnitPrice * input.val();
+		}
+		else
+		{
+			var packagingUnitPrice = 0;
+			var subtotal = 0.00;
+		}
+		var parent = input.parent();
+		
+		parent.find('.subtotal').html(money_format(subtotal));
+		parent.find('.packagingUnitPrice').html(money_format(packagingUnitPrice));
+	});
+}
+
+function getUnitPriceForAmount(amount, prices)
+{
+	amount = parseInt(amount);
+	prices = eval(prices);
+	var minStart = false;
+	for (var i=0; i<prices.length; i++) {
+		var price = prices[i];
+		if (amount >= price.start && 
+			(amount <= price.end || price.end == 0)) {
+			return parseFloat(price.price);
+		}
+		if (price.start < minStart.start || minStart == false)
+			minStart = price;
+	}
+	return parseFloat(minStart.price);
+}
+
+var coins_total_amount = 0;
+
+$('div.packagings li a.less').click(function(){
+	var input = $(this).parent().find('input:first');
+	moreLessPicker(-1,input);
+	return false;
+});
+$('div.packagings li a.more').click(function(){
+	var input = $(this).parent().find('input:first');
+	moreLessPicker( 1,input);
+	return false;
+});
+
+(function(){
+	recalculateAmounts();
+})();
+
+</script>

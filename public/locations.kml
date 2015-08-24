@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+	<Document>
+		<name>Locations for MyChocolateHearts.com.</name>
+		<atom:link rel="related" href="http://mychocolatehearts.com" />
+		<Folder>
+			<Placemark>
+				<name><![CDATA[MyChocolateHearts.com]]></name>
+				<address><![CDATA[5239 Red Burr Oak Trail, Katy, TX, 77494, United States]]></address>
+				<description><![CDATA[]]></description>
+				<Point>
+					<coordinates>-95.832074,29.7129703,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Document>
+</kml>

@@ -1,0 +1,13 @@
+<?php defined('SYSPATH') or die('No direct script access.'); ?>
+
+2015-03-16 00:48:34 -04:00 --- error: Uncaught Kohana_Exception: The requested view, mch/kohana_profiler, could not be found in file /var/www/mch/kohana_core/system/core/Kohana.php on line 1162
+2015-03-16 00:53:08 -04:00 --- error: Uncaught Kohana_404_Exception: The page you requested, favicon.ico, could not be found. in file /var/www/mch/kohana_core/system/core/Kohana.php on line 841
+2015-03-16 00:53:24 -04:00 --- error: Uncaught Kohana_Exception: The requested view, mcb/kohana_profiler, could not be found in file /var/www/mch/kohana_core/system/core/Kohana.php on line 1162
+2015-03-16 13:18:19 -04:00 --- error: Uncaught Kohana_404_Exception: The page you requested, favicon.ico, could not be found. in file /var/www/mch/kohana_core/system/core/Kohana.php on line 841
+2015-03-16 14:27:04 -04:00 --- error: Uncaught PHP Error: Object of class stdClass could not be converted to string in file application/controllers/customers.php on line 178
+2015-03-16 14:32:17 -04:00 --- error: Uncaught PHP Error: mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, object given in file application/views/mcb/customers/my_account.php on line 201
+2015-03-16 14:33:35 -04:00 --- error: Uncaught PHP Error: Object of class stdClass could not be converted to string in file application/views/mcb/customers/my_account.php on line 202
+2015-03-16 14:33:35 -04:00 --- error: Uncaught Kohana_404_Exception: The page you requested, favicon.ico, could not be found. in file /var/www/mch/kohana_core/system/core/Kohana.php on line 841
+2015-03-16 14:49:17 -04:00 --- error: Uncaught Kohana_Database_Exception: There was an SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.id = p.products_description_id ON ob. WHERE o.user_id = 26' at line 1 - SELECT o.id, ob.order_id, ob.product_id, o.user_id, image FROM orders as o LEFT JOIN orders_baskets as ob ON o.id = ob.order_id LEFT JOIN products as p ON p.id = ob.product_id LEFT JOIN products_descriptions as pd.id = p.products_description_id ON ob. WHERE o.user_id = 26 in file /var/www/mch/kohana_core/system/libraries/drivers/Database/Mysql.php on line 374
+2015-03-16 15:50:47 -04:00 --- error: Uncaught Kohana_404_Exception: The page you requested, favicon.ico, could not be found. in file /var/www/mch/kohana_core/system/core/Kohana.php on line 841
+2015-03-16 16:21:59 -04:00 --- error: Uncaught Kohana_404_Exception: The page you requested, favicon.ico, could not be found. in file /var/www/mch/kohana_core/system/core/Kohana.php on line 841

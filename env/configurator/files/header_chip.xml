@@ -1,0 +1,8 @@
+﻿<data>
+	<content x="0" y="0" width="940" height="115"> <!-- height="115" -->
+		<rect width="940" height="6" backgroundColor="0xefd748" backgroundAlpha="1.0" />
+		<image y="15" width="940" height="47" >/env/configurator/files/images/header_chip.jpg</image>
+		<label x="5" y="15" size="30" font="Dutch 801 Italic Headline BT" color="0" ><![CDATA[Design Your Chocolate Casino Chips]]></label>
+		<label x="5" y="85" size="20" font="Dutch 801 Italic Headline BT" color="0x000000" ><![CDATA[Your Design]]></label>
+	</content>
+</data>

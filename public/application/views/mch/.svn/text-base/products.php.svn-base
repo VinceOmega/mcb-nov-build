@@ -1,0 +1,33 @@
+
+		<div id="content">
+			<div id="section-header">
+				<h2 class="curly">Products</h2>
+			</div><!-- header -->
+			<div id="sidebar" class="pink-top grey-border left">
+			
+				<?php foreach($productresults as $products):?>
+				<div class="sidebar-link">
+					<a href="/products/show/<?php echo $products->title_url; ?>"><?php echo $products->name; ?></a>
+				</div>
+				<div class="grey-bar"></div>
+				<?php endforeach; ?>
+				
+			</div><!-- sidebar -->
+			<div id="products" class="right">
+			
+				<?php foreach($productresults as $products):?>
+				<div class="box grey-border left pink-corner">
+					<img src="/env/product_images/<?php echo $products->image; ?>" width="100" />
+					<div class="product-details">
+						<h3 class="curly"><?php echo $products->name; ?></h3>
+						<p><?php echo $products->short_description; ?></p>
+						<span class="price">Starting at <?php echo money_format('%.2n', $products->price).' per heart'; ?></span>
+						<a href="/products/show/<?php echo $products->title_url; ?>"><img src="/env/images/<?=My_Template_Controller::getViewPrefix()?>/get_started_button.png" /></a>
+					</div><!-- product-deatils -->
+				</div><!-- box -->
+				<?php endforeach; ?>
+				
+			
+			</div><!-- products -->
+			<div class="spacer"></div>
+		

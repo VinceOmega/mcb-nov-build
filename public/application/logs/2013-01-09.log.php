@@ -1,0 +1,5 @@
+<?php defined('SYSPATH') or die('No direct script access.'); ?>
+
+2013-01-09 11:25:52 -05:00 --- error: Uncaught Kohana_404_Exception: The page you requested, favicon.ico, could not be found. in file /var/www/mch/kohana_core/system/core/Kohana.php on line 841
+2013-01-09 19:36:14 -05:00 --- error: Uncaught Kohana_Database_Exception: There was an SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY qty_start ASC' at line 1 - SELECT * FROM product_costs WHERE productID =  ORDER BY qty_start ASC in file /var/www/mch/kohana_core/system/libraries/drivers/Database/Mysql.php on line 371
+2013-01-09 23:39:19 -05:00 --- error: Uncaught Kohana_Database_Exception: There was an SQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY qty_start ASC' at line 1 - SELECT * FROM product_costs WHERE productID =  ORDER BY qty_start ASC in file /var/www/mch/kohana_core/system/libraries/drivers/Database/Mysql.php on line 371

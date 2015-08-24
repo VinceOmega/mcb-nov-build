@@ -1,0 +1,277 @@
+
+		<div id="content">
+			<div id="section-header">
+				<h2 class="curly">Products</h2>
+			</div><!-- header -->
+			<div id="sidebar" class="grey-top grey-border left">
+<?php			
+				foreach($categories as $category)
+				{
+					if (count($category->products) == 1)
+					{
+						$_product = $category->products[0];
+						$link = '/products/show/'.$_product->products_description->title_url;
+						$title = $_product->name;
+					}
+					else
+					{
+						$link = '/products/category/'.$category->categories_description->title_url;
+						$title = $category->name;
+					}
+?>
+				<div class="sidebar-link">
+					<a href="<?=$link?>"><?=$title?></a>
+				</div>
+				<div class="grey-bar"></div>
+<?
+				}
+?>
+			</div><!-- sidebar -->
+			<div id="products" class="right">
+				<h1 class="curly" style="margin-bottom: 15px;"><?php echo $product->name; ?></h1>
+				<div id="product-info" class="square grey-border left">
+					<a href="/env/product_images/<?php echo $product->image; ?>" class="highslide" id="hsimage" onclick="return hs.expand(this)" border="0" style="border:0px; display:inline-block; min-height: 220px;">
+						<img src="/env/product_images/<?php echo $product->image; ?>" alt="<?php echo $product->image_alt ?>" width="250" border="0" style="border:0px;" />
+					</a>
+					<!--<img src="/env/product_images/<?php echo $product->image; ?>" ALT="<?php echo $product->image_alt ?>" width="250" />-->
+					<a class="enlarge" onClick="return document.getElementById('hsimage').onclick()"><img src="/env/images/enlarge.png" />Click to enlarge</a>
+				</div><!-- square -->
+				<div class="product-tabs right">
+					<div class="tab-feature">                         
+						<div class="tabs tabs-bottom">
+							<ul>
+								<li><a href="#details" title="Details" >Details</a></li>
+								<li><a href="#price" title="Price">Price</a></li>
+								<li><a href="#production_time" title="Production Time">Production Time</a></li>
+							</ul>
+							<div id="details" style="background-color:#FFFFFF;">
+								<p>Details</p>
+								<p class="detailtext" style="background-color:#FFFFFF;"><?php echo $product->description; ?></p>
+								
+							</div><!-- tabs-1 -->
+							<div id="price" width="400">
+							<table border="0">
+							  <colgroup>
+									<col width="150" />
+									<col  />
+								</colgroup>
+							  <tr>
+								<th style="text-align:left;" colspan="2">Price based on Quantity</th>
+							  </tr>
+<?							if ($product->unit == 'bags') { ?>
+							  <tr>
+								  <td colspan="2" style="font-style:normal;font-size: 12px;">Each bag contains <?=$product->coins_per_bag?> coins</td>
+							  </tr>
+<?							} ?>
+
+<?php						$c=0; 
+							foreach($productcosts as $cost)
+							{
+								$color = ($c%2 == 0) ? '#DDDDDD' : '#BBBBBB';
+								
+								if ($cost->qty_end == 0)
+									$string = $cost->qty_start.'+';
+								else if ($cost->qty_start == 0)
+									$string = $cost->qty_end;
+								else
+									$string = $cost->qty_start.' - '.$cost->qty_end;
+?>
+								<tr style="padding-bottom:5px;">
+									<td style="background-color:<?=$color?>;font-weight:normal;">
+										<?=$string?>
+									</td>
+									<td style="background-color:<?=$color?>;">
+										<?=money_format('%.2n', $cost->price)?>
+									</td>
+								</tr>
+<?
+								$c++;
+							}
+?>
+							</table>
+							</div><!-- tabs-2-->
+							<div id="production_time">
+								<?php echo $product->production_times; ?>
+              
+									<!--
+										<p>Production Time:</p>
+										<p class="detailtext">2-3 business days does not include shipping time</p>
+										<p class="detailtext">RUSH ORDERS AVAILABLE</p>
+										<p class="detailtext">call 1-866-230-7730</p>
+
+										-->
+							
+                </div><!-- tabs-3 -->
+              
+						</div><!-- tabs div -->
+					</div><!-- tab-feature div -->
+				</div><!-- product-tabs -->
+				
+        
+<?		if ($product->kind == 'MCC_GNG') { ?>
+				<form id="bagsForm" method="POST" action="https://<?=$_SERVER['SERVER_NAME']?>/shopping_cart/addGnG/<?=$product->id?>">
+					<button type="submit"><img src="/env/images/mcc/add_to_cart_button.png" /></button>
+					Amount: 
+					<a href="#" class="less">-</a>
+					<input type="text" value="1" name="bags" id="bagsAmount"
+						   onkeydown="return isNumberKey(event);"
+						   onkeyup="recalculateAmounts();"/>
+					<a href="#" class="more">+</a>
+					<br />
+<?			
+			if ($gngoptions)
+			{
+				foreach ($gngoptions as $option)
+				{
+					$opt_list = explode('#',$option->values);
+?>
+					<div class="gngOption">
+						<label><?=$option->name?></label>
+						<select name="options[<?=$option->id?>]">
+<?						foreach ($opt_list as $_opt) { ?>
+							<option><?=$_opt?></option>
+<?						} ?>
+						</select>
+					</div>
+<?
+				}
+			}
+?>
+					Total: <span id="bagsTotal"></span>
+				</form>
+				
+<?		} else { ?>
+				<a href="/products/build/<?php echo $product->title_url; ?>"><img style="margin-top: 10px;" class="right" src="/env/images/<?=My_Template_Controller::getViewPrefix()?>/get_started_button.png" alt="Get Started"/></a> 
+<?		} ?>
+				<div class="clear"></div>
+				
+				<?php if($product->id != 1 && $product->kind != 'MCC_GNG'): ?>
+					<h4 class="curly">Recently Ordered</h4>
+					<div id="recently" class="grey-border pink-corner">
+<?						$recently = array();
+						for ($i=0; $i<3; $i++)
+							if (isset($recentDesigns[$i]))
+								$recently[] = $recentDesigns[0]->designpath;
+							else {
+								if ($i==0) $recently[] = '/env/images/mcc/merry_christmas.png';
+								else if ($i==1)  $recently[] = '/env/images/mcc/happy_anniversary.png';
+								else if ($i==2)  $recently[] = '/env/images/mcc/merry_christmas.png';
+							}
+?>						
+						<ul style='display:none;'><li><a href='#tabs-1'></a></li><li><a href='#tabs-2'></a></li><li><a href='#tabs-3'></a></li></ul>
+<?						foreach ($recently as $k => $path) { ?>
+						<div id='tabs-<?=$k+1?>'><img src="<?=$path?>" /></div>
+<?						} ?>
+					</div><!-- recently -->
+				<?php else: ?>
+				<?php endif; ?>
+				
+
+
+				<h2 class="curly">Other Products</h2>
+        
+				<div id="other" class="grey-border grey-corner">
+        
+            <?php foreach($productresults as $products):?>
+                <?php if($products->name != $product->name): ?>
+      					<a href="/products/show/<?php echo $products->title_url; ?>"><img src="/env/product_images/<?php echo $products->image; ?>" alt="<?php echo $product->image_alt ?>" width="100" /></a>
+                <?php endif; ?>
+    				<?php endforeach; ?>
+				
+          
+          
+          
+          
+				</div><!-- other -->
+			</div><!-- products -->
+			<div class="spacer"></div>
+
+<script type="text/javascript">
+	
+<?
+$pricesArray = array();
+foreach (ORM::factory('product',$product->id)->getPrices() as $cost) {
+	$pricesArray[] = array(
+		'start' => intval($cost->qty_start),
+		'end'	=> intval($cost->qty_end),
+		'price'	=> floatval($cost->price)
+	);
+}
+$pricesJson = json_encode($pricesArray);
+echo 'var prices = '.$pricesJson.';'; 
+?>
+
+function money_format(price)
+{
+	return '$ '+Math.round(price*100)/100;
+}
+
+function isNumberKey(evt)
+{
+   var charCode = (evt.which) ? evt.which : event.keyCode
+   return charCode <= 57 && charCode != 32;
+}
+
+function moreLessPicker(amount, input)
+{
+	var value = parseInt(input.val());
+	if (value<1)
+		return;
+	input.val(value + amount);
+	if (input.val() == 0)
+		input.val(1);
+	
+	recalculateAmounts();
+}
+
+function recalculateTotalCoinsAmount()
+{
+	coins_total_amount = $('#bagsAmount').val();
+}
+
+function recalculateAmounts()
+{
+	recalculateTotalCoinsAmount();
+	
+	var bagsAmount = $('#bagsAmount').val();
+	var bagsUnitPrice = getUnitPriceForAmount(bagsAmount,prices);
+	var bagsTotal = bagsAmount * bagsUnitPrice;
+
+	$('#bagsTotal').html(money_format(bagsTotal))
+}
+
+function getUnitPriceForAmount(amount, prices)
+{
+	prices = eval(prices);
+	var minStart = false;
+	for (var i=0; i<prices.length; i++) {
+		var price = prices[i];
+		if (amount >= price.start && 
+			(amount <= price.end || price.end == 0)) {
+			return parseFloat(price.price);
+		}
+		if (price.start < minStart.start || minStart == false)
+			minStart = price;
+	}
+	return parseFloat(minStart.price);
+}
+
+var coins_total_amount = 0;
+
+$('#bagsForm a.less').click(function(){
+	moreLessPicker(-1,$('#bagsAmount'));
+	return false;
+});
+$('#bagsForm a.more').click(function(){
+	moreLessPicker( 1,$('#bagsAmount'));
+	return false;
+});
+
+<? if ($product->kind == 'MCC_GNG') { ?>
+recalculateAmounts();
+<? } ?>
+	
+$('div#recently').tabs({ fx: { opacity: 'toggle'} }).tabs("rotate", 3000, true);
+
+</script>
+

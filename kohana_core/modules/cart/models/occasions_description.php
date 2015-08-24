@@ -1,0 +1,1 @@
+<?php defined('SYSPATH') OR die('No direct access allowed.');class Occasions_Description_Model extends ORM {	public function getNextID() {		$db = new Database;		$occasion = $db->query('SELECT id FROM occasions_descriptions ORDER BY id DESC');		$next = $occasion[0]->id + 1;		return $next;	}  }

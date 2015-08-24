@@ -1,0 +1,24 @@
+
+<!-- Lower Navigation -->
+			<div id="lower-nav" name="footer" class="rounded-corners">
+				<div id="links">
+				<?php foreach ($links as $title => $url): ?>
+				<?php $alter = ''; if($title == 'Home') $alter = 'MyChocolateCoins.com'; else $alter = $title; $alter = str_replace('Us', 'MyChocolateCoins.com', $alter);?>
+					<a href="<?php echo $url; ?>" title="<?php echo $alter; ?>"><?php echo $title; ?></a>
+				<?php endforeach ?>
+				</div><!--links-->
+			</div><!-- lower-nav -->
+		</div><!-- content -->
+		<div id="footer" style="position: relative; height: 130px;">
+			<div id="polarcopy" style="position: absolute; left: 0; top: 0; text-align: left;">
+				2008 - <?=date('Y')?> Copyright, www.MyChocolateCoins.com. All Rights Reserved.<br />
+				<a href="/articles">Articles</a> | 
+				<a href="/articles/sitemap.html">Sitemap</a> | 
+				<a href="/rssfeed.xml">Rss 2.0 Valid</a>
+			</div>
+			<div id="polarcopy" style="position: absolute; right: 0; top: 0;"><a href="http://www.polardesign.com/" target="_blank">Web Design</a> by <a href="http://www.polardesign.com/" target="_blank">Polar Design</a> &#169; <?=date('Y')?></div>
+			<div id="seals" style="position: absolute; right: 0; top: 90px;">
+				<span id="siteseal"><script type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=srphzZtJgB4fwB9Ep4Wic9oNp04vjmCdKUCdisohHb5OAC29e50jTlp"></script></span>
+				<!-- (c) 2005, 2012. Authorize.Net is a registered trademark of CyberSource Corporation --> <div class="AuthorizeNetSeal" style="float:right;margin-top:-68px;font-weight:bold; "> <script type="text/javascript" language="javascript">var ANS_customer_id="a3944379-8465-4015-892a-fb6debe2d8b9";</script> <script type="text/javascript" language="javascript" src="//verify.authorize.net/anetseal/seal.js" ></script> http://www.authorize.net/ [^] </div></div>
+		</div><!-- footer -->
+	</div><!-- root -->

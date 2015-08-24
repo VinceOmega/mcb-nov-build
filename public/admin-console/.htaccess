@@ -1,0 +1,36 @@
+AuthUserFile /var/www/mch/public/admin-console/.htpasswd
+AuthGroupFile /dev/null
+AuthName "MyChocolateHearts.com Admin Console"
+AuthType Basic
+
+<Limit GET>
+require valid-user
+</Limit>
+
+# needed for the blog
+php_flag display_errors off
+
+# Turn on URL rewriting
+RewriteEngine On
+Options +FollowSymlinks
+
+# Installation directory
+#RewriteBase /kohana/
+
+RewriteBase /admin-console/
+
+
+# Protect application and system files from being viewed
+RewriteRule ^(application|modules|system) - [F,L]
+
+# Allow any files or directories that exist to be displayed directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite all other URLs to index.php/URL
+RewriteRule .* index.php/$0 [PT,L]
+
+
+
+
+AddType text/x-component .htc

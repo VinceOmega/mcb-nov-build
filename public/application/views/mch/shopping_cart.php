@@ -1,0 +1,188 @@
+<script>
+var quantity=new Array();
+</script>
+<div id="content">
+			<div id="pink-section-header">
+				<h2 class="curly">Shopping Cart</h2>
+			</div><!-- header -->
+			<div id="shopping-cart" class="grey-border">
+				
+				
+				
+				<?php if(count($itemsresults) == 0): ?>
+
+				<h4>You have no items in your shopping cart</h2>
+
+				</div><!-- shopping-cart -->
+
+				<?php else: ?>
+				
+				<h4>Please review the products and quantities in your order.</h4>
+				<h4>Remove products, or change quantities if necessary or continue shopping to add additional products.</h4>
+				<form action="/shopping_cart/update_quantity" method="post" name="updateQuantity" id="updateQuantity">
+				<?php $total = 0; $i = 1; ?>
+				<?php foreach($itemsresults as $items):?>
+				<?php $total += $items->subtotal; ?>
+				<div class="order grey-border">
+					<div class="order-headers left">
+						<span class="item left"><h3>Quantity</h3></span>
+						<span class="item left"><h3>Product</h3></span>
+						<span class="item left"><h3>Unit Price</h3></span>
+						<span class="item left"><h3>Total</h3></span>
+					</div><!--order-headers -->
+					<div class="item left">
+					
+                                            <input type="text" <?=($items->kind == 'MCH_GNG')? "class='quantityItem'": ''?>  name="orders_basket[<? echo $items->id; ?>]" id="quantityItem<?php echo $i; ?>"  value="<?php echo $items->qty; ?>" />
+					
+					</div><!-- quantity -->
+					<div class="item left">
+						<a href="/env/product_images/<?php echo $items->productimage; ?>" class="highslide" id="hsimage<?php echo $items->id; ?>" onclick="return hs.expand(this, { src: '<?php echo $items->designpath; ?>' })" border="0">
+						<img src="/env/product_images/<?php echo $items->productimage; ?>" alt="Your custom chocolate hearts!" width="100" title="Click to see your product!" border="0" /></a>
+						<p><?php echo $items->productname; ?></p>
+						<a class="red" href="/orders/view/<?php echo $items->id; ?>">Review Product</a>
+						<!--<a class="red enlarge" onClick="return document.getElementById('hsimage<?php echo $items->id; ?>').onclick()">Review Product</a>-->
+					</div><!-- product -->
+					<div class="item left">
+						<p><?php echo money_format('%.2n', $items->rate); ?></p>
+					</div><!-- unit-price -->
+					<div class="item left">
+						<p><?php echo money_format('%.2n', $items->subtotal); ?></p>
+					</div><!-- total -->
+					<div style="margin-top: 50px;"  class="item left">
+						<a class="red" href="#" onClick="javascript:deleteOrder(<?php echo $items->id; ?>);">Remove</a>
+					</div><!-- remove -->
+				</div><!-- order -->
+				
+				<script>
+					quantity[<?php echo $i; ?>] = new Array(3);
+					quantity[<?php echo $i; ?>][0] = <?php echo $items->id; ?>;
+					quantity[<?php echo $i; ?>][1] = <?php echo $items->product_id; ?>;
+					quantity[<?php echo $i; ?>][2] = <?php echo $items->qty; ?>;
+
+				</script>
+				<?php $i++; ?>
+				<?php endforeach; ?>
+				
+			
+				
+				
+			</div><!-- shopping-cart -->
+			<span id="update-quantity" class="left"><a class="red" href="#" onClick="if(! check_amount()) return false; javascript:verifyQty()">Update Quantity</a></span>
+			</form>
+                        <div id="popupInfo" style="top: 260px; left: 300px; width: 500px; height: 210px; position: absolute; background-color: rgb(255, 255, 255); border-style: solid; border-color: rgb(255, 202, 210); bottom: -50px; margin: 30px 0px 0px 60px; padding: 10px; display: none; visibility: visible;">
+                                <div id="close_button" onclick="hideErrorBlock()"  style="text-align: right">
+                                    <img src="/env/images/close_button.png" alt="" />
+                                </div>
+				<div id="tooSoonHead"><h3>Quantity Error</h3></div>
+				<div class="clear pink-bar"></div>
+                                <div id="tooSoonText"><p>The minimum quantity of this product is 200</p></div>
+			</div>
+			<form method="post" action="/shopping_cart/checkout/" name="checkoutForm" id="checkoutForm">
+			<div id="request-date" class="right">
+				<img class="left" style="margin-right: 5px;" src="/env/images/small-hearts.png" />
+				<h4 class="left">Requested Date</h4>
+				
+					<input class="left" type="text" name="requesteddate" id="requesteddate" />
+				
+				<img class="left" src="/env/images/calendar.png" onClick="javascript:$('#requesteddate').focus();" />
+			</div><!-- request-date -->
+			<div class="clear"></div>
+			<span id="product-subtotal" class="right"><h3>Product Subtotal: <?php echo money_format('%.2n', $total); ?></h3></span>
+			<div class="clear"></div>
+			<a><img style="margin-bottom: 30px;" class="right" src="/env/images/checkout.png" onClick="document.checkoutForm.submit();" /></a>
+			</form>
+			<div class="clear"></div>
+			<img style="margin-bottom: 10px;" class="right" src="/env/images/authorize.png" />
+			<div class="clear pink-bar" style="margin-bottom: 20px;"></div>
+		<script>
+			$('#requesteddate').datepicker({dateFormat: 'yy-mm-dd'});
+		</script>
+	 
+		<script>
+					
+			function deleteOrder(id){
+			
+				var r = confirm("Are you sure you want to remove this order from your shopping cart?");
+				if (r == true) {
+					document.location.href='/orders/remove/' + id;
+				} else {
+					
+				}
+					
+			}
+			
+		</script>
+		<script>
+			function verifyQty(){
+				
+				var qtylen = quantity.length;
+				//alert(qtylen);
+				for(var k=1; k < qtylen; k++) {
+					var caseVal = quantity[k][1];
+					switch (caseVal) {
+					case 1:	
+						if(document.getElementById("quantityItem"+k).value < 300) {
+							alert("Quantity needs to be at least 300 for item #"+k+" in your shopping cart.");
+							document.getElementById("quantityItem"+k).focus();
+							return false;
+						}
+						break;
+					case 2:
+						if(document.getElementById("quantityItem"+k).value < 50) {
+							alert("Quantity needs to be at least 50 for item #"+k+" in your shopping cart.");
+							document.getElementById("quantityItem"+k).focus();
+							return false;
+						}
+
+						break;
+					case 3:
+						if(document.getElementById("quantityItem"+k).value < 500) {
+							alert("Quantity needs to be at least 500 for item #"+k+" in your shopping cart.");
+							document.getElementById("quantityItem"+k).focus();
+							return false;
+						}
+
+						break;
+					case 4:
+						if(document.getElementById("quantityItem"+k).value < 600) {
+							alert("Quantity needs to be at least 600 for item #"+k+" in your shopping cart.");
+							document.getElementById("quantityItem"+k).focus();
+							return false;
+						}
+
+						break;
+					
+					} 
+				
+				}
+				
+				document.updateQuantity.submit();
+
+			}
+
+		</script>
+
+		<?php endif; ?>
+
+<script type="text/javascript">
+    function check_amount() {
+        var error = false;
+        $('.quantityItem').each(function(){
+            var amount = $(this).val();
+            if(amount < 200) {
+                $('#popupInfo').css('display', 'block');
+                error = true;
+            }
+        });
+        if(error)
+            return false;
+        else
+            return true;
+    }
+
+    function hideErrorBlock() {
+        $('#popupInfo').css('display', 'none');
+    }
+</script>
+
+

@@ -1,0 +1,214 @@
+/* CSS Document */
+
+.htabs  {
+	min-height:200px;
+	margin-bottom:15px;
+	padding:10px 0;
+	float:left;
+	border-right:1px solid #DDD;
+	}
+	
+.htabs a {
+	background:none repeat scroll 0 0 #F7F7F7;
+	border-left:1px solid #DDDDDD;
+	border-bottom:1px solid #DDDDDD;
+	border-top:1px solid #DDDDDD;
+	color:#000000;
+	font-size:13px;
+	font-weight:bold;
+	display:block;
+	padding:8px;
+	text-decoration:none;
+	cursor:pointer;
+	margin-bottom:5px;
+	width:150px;
+	}
+
+.htabs a.selected {
+	background:none repeat scroll 0 0 #CCCCCC;
+	border-right:none;
+	}
+ 
+div.headline {
+	background-color:#DFDFDF;
+	font-size:1.1em;
+	margin:0 0 10px 0;
+	padding:5px;
+	}
+
+#heading {
+	margin:0;
+	padding:5px;
+	float:left;
+	font-size:1.4em;
+	}
+
+#contentLeft {
+	float:left;
+	min-height:300px;
+	display:block;
+	margin-right:15px;
+	}
+	
+#content {
+	border-bottom:1px solid #DDD;
+	border-left: 1px solid #DDD;
+	border-right: 1px solid #DDD;
+}
+
+#contentRight {
+	float:left;
+	width:700px;
+	border:1px solid #DDD;
+	}
+
+#headingDiv {
+	height:40px;
+	background-color:#F7F7F7;
+	}
+	
+#buttons {
+	float:right;
+	padding:10px;
+	}
+	
+div#mainContent {
+	width:900px; 
+	margin:auto;
+	}
+/*	
+.button  {
+	background:url(../images/button_left.png) no-repeat scroll left top transparent;
+	display: inline-block;
+	margin-right:5px;
+	padding-left:8px;
+	font-weight:600;
+	}
+	
+a.button:hover {
+	background:url(../images/button_left_over.png) no-repeat scroll left top transparent;	
+}
+
+a.button:hover span{
+	background:url(../images/button_right_over.png) no-repeat scroll right top transparent;	
+}
+
+.button span {
+	background:url(../images/button_right.png) no-repeat scroll right top transparent;
+	color:#FFFFFF;
+	display:block;
+	padding:2px 10px 3px 2px;
+	}
+*/	
+a, a:visited {
+	color:#003366;
+	cursor:pointer;
+	}
+
+.link {
+	text-decoration:underline;
+	}
+
+#tab_general, #tab_meta_infromation, #tab_category_products, #tab_image, #tab_shipping, #tab_custom_options {
+	padding:10px;
+	}
+
+.box > .left {
+	background:url(../images/box_left.png) no-repeat scroll 0 0 transparent;
+	float:left;
+	height:40px;
+	width:7px;
+	}
+
+.box > .right {
+	background:url(../images/box_right.png) no-repeat scroll 0 0 transparent;
+	float:right;
+	height:40px;
+	width:7px;
+	}
+
+.box > .heading {
+	background:url(../images/box_center.png) repeat-x scroll 0 0 transparent;
+	height:40px;
+	margin-bottom:0;
+	}
+
+td.centered {
+	text-align:center;
+	}
+	
+.list {
+	margin:10px;
+	width:95%; 
+	border:1px solid #DDD;
+	}	
+
+.list th{
+	background-color:#CECECE;
+	}
+
+.list th, .list td{
+	border:1px solid #DDD;
+	}
+	
+.formTextDimension {
+	width:50px;
+	margin-right:10px;
+	}
+.name {
+	width:500px;
+}
+textarea.name {
+	height:100px;
+}
+textarea.formText {
+	overflow:auto;
+	width:250px;
+	height:80px;
+	}
+	
+.form {
+	border-collapse:collapse;
+	margin-bottom:20px;
+	margin-top:20px;
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	}
+
+table.form tr td:first-child {
+	width:200px;
+}
+
+
+
+.form > * > * > td  {
+	border-bottom:1px dotted #CCCCCC;
+	color:#000000;
+	padding:5px;
+}
+
+
+.list > * > * > td {
+/*	border-bottom:1px dotted #CCCCCC;*/
+	color:#000000;
+	padding:5px;
+}
+
+tr.filter td {
+	text-align:center;
+	}
+	
+table#products td {
+	text-align:center;
+	}
+	
+div.menu {
+	text-align:center;
+	}
+
+div.menu ul {
+	list-style-type:none;
+	}
+	
+	
