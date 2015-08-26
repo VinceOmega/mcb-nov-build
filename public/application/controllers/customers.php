@@ -533,7 +533,10 @@ $sql = "SELECT *, COUNT(*) FROM user_designs WHERE userid = $user->id";
 				// $user->phone2 = $post->second_phone;
 				// $user->save();
 				// unset($user);
-				if($post->s_billing === '1' && isset($post->s_billing)){
+
+				// print_r($post->s_billing)
+
+				if(isset($post->s_billing) === '1' && isset($post->s_billing) != ""){
 
 					$shipping = $db->query("INSERT INTO user_shipping_infos
 							SET user_id = '$id',
