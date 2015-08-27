@@ -90,7 +90,7 @@
 <? 
 
 echo "<pre>";
-foreach($orderrsults as $orders){
+foreach($orderresults[0] as $orders){
 print_r($orders);
 }
 echo "-----------";
