@@ -54,11 +54,15 @@ class Orders_Controller extends My_Template_Controller {
 		
 		$db=new Database;
 
-		$result = $db->query('SELECT orders.id, orders.trans_id, orders_baskets.*, products.name as productname, products_descriptions.image as pimage FROM orders INNER JOIN orders_baskets ON orders.id = orders_baskets.order_id LEFT JOIN products ON orders_baskets.product_id = products.id LEFT JOIN products_descriptions ON products_descriptions.id = products.id WHERE orders.sessionID = \''.session_id().'\' AND orders.statusID IN (1,3)');
+		$result = $db->query('SELECT orders.id, orders.trans_id, orders_baskets.*, products.name as productname, products_descriptions.image as productimage FROM orders INNER JOIN orders_baskets ON orders.id = orders_baskets.order_id LEFT JOIN products ON orders_baskets.product_id = products.id LEFT JOIN products_descriptions ON products_descriptions.id = products.id WHERE orders.sessionID = \''.session_id().'\' AND orders.statusID IN (1,3)');
         $this->template->content->orderresults = $result;
 		//$orderid = $result[0]->id;
 
-		$result = $db->query('SELECT products.name as productname, products.products_description_id as products_description_id, products.kind, products_descriptions.title_url, products_descriptions.description, products_descriptions.meta_description, products_descriptions.meta_keywords, products_descriptions.meta_title, products_descriptions.image as productimage, flavors.name as flavorname, foil_colors.name as foilcolor, orders_baskets.*  FROM orders_baskets LEFT JOIN products ON orders_baskets.product_id = products.id LEFT JOIN products_descriptions ON products.products_description_id = products_descriptions.id LEFT JOIN flavors ON orders_baskets.flavor_id = flavors.id LEFT JOIN foil_colors ON orders_baskets.foil_id = foil_colors.id WHERE orders_baskets.order_id = '.$orderid.'');
+		$result = $db->query('SELECT products.name as productname, products.products_description_id as products_description_id, products.kind, products_descriptions.title_url, products_descriptions.description, products_descriptions.meta_description, products_descriptions.meta_keywords, products_descriptions.meta_title, products_descriptions.image as productimage, flavors.name as flavorname, foil_colors.name as foilcolor, orders_baskets.*  
+							FROM orders_baskets LEFT JOIN products ON orders_baskets.product_id = products.id LEFT JOIN products_descriptions ON products.products_description_id = products_descriptions.id 
+							LEFT JOIN flavors ON orders_baskets.flavor_id = flavors.id 
+							LEFT JOIN foil_colors ON orders_baskets.foil_id = foil_colors.id 
+							WHERE orders_baskets.order_id = '.$orderid.'');
         $this->template->content->order = $result[0];
 
 		$this->template->metaDescription = isset($result[0]->meta_description);
