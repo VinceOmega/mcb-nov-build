@@ -1961,6 +1961,10 @@ padding: 4.2px;
 	text-align: center;
 }
 
+#content.quantity .quantity-cal-section .right-col{
+	width: 40.33333%;
+}
+
 #content.quantity .quantity-cal-section .left-col,
 #content.quantity .quantity-cal-section .right-col{
 	padding: 5px;
