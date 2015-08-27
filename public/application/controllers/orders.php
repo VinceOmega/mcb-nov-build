@@ -54,8 +54,18 @@ class Orders_Controller extends My_Template_Controller {
 		
 		$db=new Database;
 
-		$result = $db->query('SELECT orders.id, orders.trans_id, orders_baskets.*, products.name as productname, products_descriptions.image as productimage, products_descriptions.title_url FROM orders INNER JOIN orders_baskets ON orders.id = orders_baskets.order_id LEFT JOIN products ON orders_baskets.product_id = products.id LEFT JOIN products_descriptions ON products_descriptions.id = products.id WHERE orders.sessionID = \''.session_id().'\' AND orders.statusID IN (1,3)');
-        $this->template->content->orderresults = $result;
+		$oresult = $db->query('SELECT orders.id, 
+			orders.trans_id, 
+			orders_baskets.*, 
+			products.name as productname, 
+			products_descriptions.image as productimage, 
+			products.kind, 
+			products_descriptions.title_url, 
+			products_descriptions.description, 
+			products_descriptions.meta_description, 
+			products_descriptions.meta_keywords, 
+			products_descriptions.meta_title FROM orders INNER JOIN orders_baskets ON orders.id = orders_baskets.order_id LEFT JOIN products ON orders_baskets.product_id = products.id LEFT JOIN products_descriptions ON products_descriptions.id = products.id WHERE orders.sessionID = \''.session_id().'\' AND orders.statusID IN (1,3)');
+        $this->template->content->orderresults = $oresult;
 		//$orderid = $result[0]->id;
 
 		$result = $db->query('SELECT products.name as productname, products.products_description_id as products_description_id, products.kind, products_descriptions.title_url, products_descriptions.description, products_descriptions.meta_description, products_descriptions.meta_keywords, products_descriptions.meta_title, products_descriptions.image as productimage, flavors.name as flavorname, foil_colors.name as foilcolor, orders_baskets.*  
@@ -63,16 +73,16 @@ class Orders_Controller extends My_Template_Controller {
 							LEFT JOIN flavors ON orders_baskets.flavor_id = flavors.id 
 							LEFT JOIN foil_colors ON orders_baskets.foil_id = foil_colors.id 
 							WHERE orders_baskets.order_id = '.$orderid.'');
-        $this->template->content->order = $result[0];
+        $this->template->content->order = $result;
 
-		$this->template->metaDescription = isset($result[0]->meta_description);
-		$this->template->metaKeywords = isset($result[0]->meta_keywords);
-		$this->template->metaTitle = isset($result[0]->meta_title);
+		$this->template->metaDescription = $result->meta_description;
+		$this->template->metaKeywords = $result->meta_keywords;
+		$this->template->metaTitle = $result->meta_title;
 
 		// You can assign anything variable to a view by using standard OOP
 		// methods. In my welcome view, the $title variable will be assigned
 		// the value I give it here.
-		$this->template->title = isset($result[0]->meta_title);
+		$this->template->title = $result->meta_title;
 	}
 
 	public function edit() {
