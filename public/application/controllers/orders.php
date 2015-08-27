@@ -54,7 +54,7 @@ class Orders_Controller extends My_Template_Controller {
 		
 		$db=new Database;
 
-		$result = $db->query('SELECT orders.id, orders.trans_id, orders_baskets.*, products.name as productname, products_descriptions.image as productimage FROM orders INNER JOIN orders_baskets ON orders.id = orders_baskets.order_id LEFT JOIN products ON orders_baskets.product_id = products.id LEFT JOIN products_descriptions ON products_descriptions.id = products.id WHERE orders.sessionID = \''.session_id().'\' AND orders.statusID IN (1,3)');
+		$result = $db->query('SELECT orders.id, orders.trans_id, orders_baskets.*, products.name as productname, products_descriptions.image as productimage, products_descriptions.title_url FROM orders INNER JOIN orders_baskets ON orders.id = orders_baskets.order_id LEFT JOIN products ON orders_baskets.product_id = products.id LEFT JOIN products_descriptions ON products_descriptions.id = products.id WHERE orders.sessionID = \''.session_id().'\' AND orders.statusID IN (1,3)');
         $this->template->content->orderresults = $result;
 		//$orderid = $result[0]->id;
 
