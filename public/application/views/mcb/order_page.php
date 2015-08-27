@@ -64,7 +64,7 @@
 					Choose Quantity<br>
 
 					<?php foreach($orderresults[0] as $orders):?>
-					<a href="#" onclick="javascript:;" class="reduce">-</a> <input type="text" name="orders_basket[<? echo $orders->id; ?>]" class="number-field" value="<?php echo $orders->qty; ?>"><a href="#" onclick="javascript:;" class="plus">+</a><br>
+					<a href="#" onclick="javascript:;" class="reduce">-</a> <input type="text" name="orders_basket[<? echo isset($orders->id); ?>]" class="number-field" value="<?php echo isset($orders->qty); ?>"><a href="#" onclick="javascript:;" class="plus">+</a><br>
 					<a href="#" class="update">Update</a>
 					<input type="hidden" name="rate" class="item-rate" value="<?= isset($orders->rate)?>">
 					<?php endforeach; ?>
