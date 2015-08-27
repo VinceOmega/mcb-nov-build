@@ -75,14 +75,14 @@ class Orders_Controller extends My_Template_Controller {
 							WHERE orders_baskets.order_id = '.$orderid.'');
         $this->template->content->order = $result;
 
-		$this->template->metaDescription = $oresult->meta_description;
-		$this->template->metaKeywords = $oresult->meta_keywords;
-		$this->template->metaTitle = $oresult->meta_title;
+		$this->template->metaDescription = $oresult[0]->meta_description;
+		$this->template->metaKeywords = $oresult[0]->meta_keywords;
+		$this->template->metaTitle = $oresult[0]->meta_title;
 
 		// You can assign anything variable to a view by using standard OOP
 		// methods. In my welcome view, the $title variable will be assigned
 		// the value I give it here.
-		$this->template->title = $oresult->meta_title;
+		$this->template->title = $oresult[0]->meta_title;
 	}
 
 	public function edit() {
