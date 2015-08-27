@@ -90,5 +90,7 @@
 <? 
 
 echo "<pre>";
+print_r($orderresults);
+echo "-----------";
 print_r($order);
 echo "</pre>";
