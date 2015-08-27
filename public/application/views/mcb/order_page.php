@@ -6,7 +6,7 @@
 	</div>
 		<div class="row col-md-12 col-xs-12 col-sm-12 col-lg-12 ghost">
 			<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
-			<?php foreach($orderresults[0] as $orders):?>
+			<?php foreach($orderresults as $orders):?>
 				<h3><? echo $orders->productname;?></h3>
 
 				<?php endforeach; ?>
