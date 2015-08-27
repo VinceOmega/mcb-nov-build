@@ -339,6 +339,7 @@ class Shopping_Cart_Controller extends My_Template_Controller {
 		$this->template->content->requesteddate = $order->order_delivery_date;
 		
 		// After all the alterations and everything have been made, select the basket and pass on the this of items to the template
+		$db=new Database;
 		$resultall = $db->query('
 							SELECT 
 								orders_baskets.*, 
