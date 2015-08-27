@@ -53,9 +53,9 @@
 			<!--Begin Left Col -->
 				<div class="col-md-8 left-col">
 					<h3>Payment Type</h3>
-					<input type="hidden" name="orderid" id="orderid" value="<?=$order->id?>" />
-					<input type="hidden" name="shippingtotal" id="shippingtotal" value="<?=$order->shipping_total?>" />
-					<input type="hidden" name="ordertotal" id="ordertotal" value="<?=$order->order_total?>" />
+					<input type="hidden" name="orderid" id="orderid" value="<?=isset($order->id)?>" />
+					<input type="hidden" name="shippingtotal" id="shippingtotal" value="<?=isset($order->shipping_total)?>" />
+					<input type="hidden" name="ordertotal" id="ordertotal" value="<?=isset($order->order_total)?>" />
 
 						<input name="payment_method" type="radio" checked value="credit_card" onclick="toggleSet(this)"><span>Credit Card</span><img src="/env/images/mcb/mastercard.png" alt="Master Card Logo"><img src="/env/images/mcb/visa.png" alt="VISA Logo"><img src="/env/images/mcb/americanexpress.png" alt="American Express Logo"><img src="/env/images/mcb/discover.png" alt="Discover Logo"><br>
 <?//						<div class="header"><input type="radio" name="payment_method" value="paypal" onclick="toggleSet(this)" id="input_payment_method_paypal">PayPal</div>?>
@@ -134,9 +134,9 @@
 						</ul>
 <? } ?>
 
-									<span class="check-subtotal">Subtotal: <span class="price">US $<?=money_format('%.2n', $order->subtotal)?></span></span><br>
-									<span class="check-shipping">Shipping Cost: <span class="price">US $<?=money_format('%.2n', $order->shipping_total)?></span></span><br>
-									<span class="check-total">Order Total: <span class="price ">US $<?=money_format('%.2n', $order->order_total)?></span></span><br>
+									<span class="check-subtotal">Subtotal: <span class="price">US $<?=money_format('%.2n', isset($order->subtotal))?></span></span><br>
+									<span class="check-shipping">Shipping Cost: <span class="price">US $<?=money_format('%.2n', isset($order->shipping_total))?></span></span><br>
+									<span class="check-total">Order Total: <span class="price ">US $<?=money_format('%.2n', isset($order->order_total))?></span></span><br>
 						<a href="/shopping_cart/" id="btn-back-cart">Back to Cart</a>
 								<h4>Shipping Address</h4><br/>
 									<b><?=$user->user_shipping_info->firstname.' '.$user->user_shipping_info->lastname; ?></b>
