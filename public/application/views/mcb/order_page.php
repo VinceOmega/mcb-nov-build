@@ -7,26 +7,26 @@
 		<div class="row col-md-12 col-xs-12 col-sm-12 col-lg-12 ghost">
 			<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
 			<?php foreach($orderresults[0] as $orders):?>
-				<h3><? echo isset($orders->productname);?></h3>
-				
+				<h3><? echo $orders->productname;?></h3>
+
 				<?php endforeach; ?>
 			</div><br>
 			<div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 quantity-items">
 			 <?php if(empty($orderresults[0]->designpath)): ?>
-				<span class="cart-imgs"><img src="/env/product_images/<?php echo isset($orderresults[0]->productimage); ?>" alt="product" width="102"></span>
+				<span class="cart-imgs"><img src="/env/product_images/<?php echo $orderresults[0]->productimage; ?>" alt="product" width="102"></span>
 			<?php else: ?>
-				<span class="cart-imgs"><a href="<?php echo isset($orderresults[0]->designpath); ?>" class="highslide" id="hsimage<?php echo isset($orderresults[0]->id); ?>" onclick="return hs.expand(this, { src: '<?php echo isset($orderresults[0]->designpath); ?>' })" border="0"><img src="<?php echo isset($orderresults[0]->designpath); ?>" alt="Your custom chocolate chocolate bar!" width="102" title="Click to enlarge your design" border="0" /></a></span>
+				<span class="cart-imgs"><a href="<?php echo $orderresults[0]->designpath; ?>" class="highslide" id="hsimage<?php echo $orderresults[0]->id; ?>" onclick="return hs.expand(this, { src: '<?php echo isset($orderresults[0]->designpath); ?>' })" border="0"><img src="<?php echo isset($orderresults[0]->designpath); ?>" alt="Your custom chocolate chocolate bar!" width="102" title="Click to enlarge your design" border="0" /></a></span>
 
 			<?php endif; ?>
 			</div>
 			<div class="col-md-9 col-xs-9 col-sm-9 col-lg-9 quantity-description">
-				<a href="#"><?php echo isset($orderresults[0]->productname); ?></a><br>
-				<p> Product Unit Price : <b>US $<?php echo money_format('%.2n', isset($orderresults[0]->rate)); ?></b></p><br>
-				<a class="btn rnd cream" href="/products/show/<?php echo isset($orderresults[0]->title_url); ?>">Review Product</a>
+				<a href="#"><?php echo $orderresults[0]->productname; ?></a><br>
+				<p> Product Unit Price : <b>US $<?php echo money_format('%.2n', $orderresults[0]->rate); ?></b></p><br>
+				<a class="btn rnd cream" href="/products/show/<?php echo $orderresults[0]->title_url; ?>">Review Product</a>
 			</div>
 			<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 quantity-pack-text">
 				<h3>Packaging</h3><br>
-				<p><?=isset($orderresults[0]->description)?></p>
+				<p><?=$orderresults[0]->description?></p>
 			</div>
 			<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 quantity-cal-section">
 				<h3>Quantity</h3><br>
@@ -37,25 +37,25 @@
 					50-99
 					</div>
 					<div class="col-md-4 col-xs-4 col-sm-4 col-lg-4 right-col lt-brown first">
-					&nbsp;&nbsp;$<?=money_format('%2n', isset($orderresults[0]->rate)*50)?>-$<?=money_format('%2n', isset($orderresults[0]->rate)*99)?>
+					&nbsp;&nbsp;$<?=money_format('%2n', $orderresults[0]->rate*50)?>-$<?=money_format('%2n', $orderresults[0]->rate*99)?>
 					</div>
 					<div class="col-md-8 col-xs-8 col-sm-8 col-lg-8 left-col mocha">
 					100-249
 					</div>
 					<div class="col-md-4 col-xs-4 col-sm-4 col-lg-4 right-col mocha">
-					&nbsp;&nbsp;$<?=money_format('%2n', isset($orderresults[0]->rate)*100)?>-$<?=money_format('%2n', isset($orderresults[0]->rate)*249)?>
+					&nbsp;&nbsp;$<?=money_format('%2n', $orderresults[0]->rate*100)?>-$<?=money_format('%2n', $orderresults[0]->rate*249)?>
 					</div>
 					<div class="col-md-8 col-xs-8 col-sm-8 col-lg-8 left-col lt-brown">
 					250-299
 					</div>
 					<div class="col-md-4 col-xs-4 col-sm-4 col-lg-4 right-col lt-brown">
-					&nbsp;&nbsp;$<?=money_format('%2n', isset($orderresults[0]->rate)*250)?>-$<?=money_format('%2n', isset($orderresults[0]->rate)*299)?>
+					&nbsp;&nbsp;$<?=money_format('%2n', $orderresults[0]->rate*250)?>-$<?=money_format('%2n', $orderresults[0]->rate*299)?>
 					</div>
 					<div class="col-md-8 col-xs-8 col-sm-8 col-lg-8 left-col mocha last">
 					1000+
 					</div>
 					<div class="col-md-4 col-xs-4 col-sm-4 col-lg-4 right-col mocha last">
-					&nbsp;&nbsp;$<?=money_format('%2n', isset($orderresults[0]->rate)*1000)?>
+					&nbsp;&nbsp;$<?=money_format('%2n', $orderresults[0]->rate*1000)?>
 					</div>
 				</div>
 			<!-- Brown Box -->
@@ -65,14 +65,14 @@
 					Choose Quantity<br>
 
 					<?php foreach($orderresults as $orders):?>
-					<a href="#" onclick="javascript:;" class="reduce">-</a> <input type="text" name="orders_basket[<? echo isset($orders->id); ?>]" class="number-field" value="<?php echo isset($orders->qty); ?>"><a href="#" onclick="javascript:;" class="plus">+</a><br>
+					<a href="#" onclick="javascript:;" class="reduce">-</a> <input type="text" name="orders_basket[<? echo $orders->id; ?>]" class="number-field" value="<?php echo $orders->qty; ?>"><a href="#" onclick="javascript:;" class="plus">+</a><br>
 					<a href="#" class="update">Update</a>
-					<input type="hidden" name="rate" class="item-rate" value="<?= isset($orders->rate)?>">
+					<input type="hidden" name="rate" class="item-rate" value="<?= $orders->rate?>">
 					<?php endforeach; ?>
 					</span>
 			</div>
 				<div class="col-md-4 col-xs-4 col-sm-4 col-lg-4 quantity-tabulation">
-						<p>Unit Price: <b>$<?=money_format('%2n', isset($orderresults[0]->rate))?></b></p>
+						<p>Unit Price: <b>$<?=money_format('%2n', $orderresults[0]->rate)?></b></p>
 						<p>Subtotal: <b>$<span class="price-subtotal-col"></span></b></p>
 				</div>
 				<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 quantity-submission">
