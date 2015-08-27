@@ -653,22 +653,28 @@ echo "</pre>";
 
 <?php
 echo "<pre>";
+if(isset($saved)){
 foreach($saved as $obj){
 print_r($obj);
+}
 }
 echo "</pre>";
 ?>
 
 <?php
 echo "<pre>";
+if(issset($bcount_value)){
 print_r($bcount_value);
+}
 echo "</pre>";
 ?>
 
 
 <?php
 echo "<pre>";
+if(issset($dcount_value)){
 print_r($dcount_value);
+}
 echo "</pre>";
 ?>
 
