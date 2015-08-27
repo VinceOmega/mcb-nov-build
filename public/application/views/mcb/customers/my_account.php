@@ -143,6 +143,7 @@ foreach($personal_info_fields as $section => $fields){
 				<h2>Saved Designs</h2>
 				<? if(isset($ost)) $idx = $ost; else $idx = 1; ?>
 				<? $lmt = 0; ?>
+				<? $itemnums = 0; ?>
 				<? if(isset($saved)){$itemnums = sizeof($saved);}?>
 				<? if(isset($saved)){ ?>
 				<? foreach($saved as $array){ ?>
@@ -179,7 +180,6 @@ foreach($personal_info_fields as $section => $fields){
 						
 					}?>
 	
-						<? if(!$itemnums) $itemnums = 0; ?>
 						<? $cnt = 0; $k = 1;?>
 			<div class="rnd rnd-bar col-md-6 peanut pagination">
 					<?$cnt = floor($lmt/10); if($lmt%10 != 0){$cnt++; }?>
