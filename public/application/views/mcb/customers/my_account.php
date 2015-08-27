@@ -179,6 +179,7 @@ foreach($personal_info_fields as $section => $fields){
 						
 					}?>
 	
+						<? if(!$itemnums) $itemnums = 0; ?>
 						<? $cnt = 0; $k = 1;?>
 			<div class="rnd rnd-bar col-md-6 peanut pagination">
 					<?$cnt = floor($lmt/10); if($lmt%10 != 0){$cnt++; }?>
