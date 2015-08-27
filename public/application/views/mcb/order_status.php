@@ -86,9 +86,9 @@
 						</ul>
 <? } ?>
 <? if($order){ ?>
-									<span class="check-subtotal">Subtotal: <span class="price">US $<?=money_format('%.2n', $order->subtotal)?></span></span><br>
-									<span class="check-shipping">Shipping Cost: <span class="price">US $<?=money_format('%.2n', $order->shipping_total)?></span></span><br>
-									<span class="check-total">Order Total: <span class="price ">US $<?=money_format('%.2n', $order->order_total)?></span></span><br>
+									<span class="check-subtotal">Subtotal: <span class="price">US $<?=money_format('%.2n', isset($order->subtotal))?></span></span><br>
+									<span class="check-shipping">Shipping Cost: <span class="price">US $<?=money_format('%.2n', isset($order->shipping_total))?></span></span><br>
+									<span class="check-total">Order Total: <span class="price ">US $<?=money_format('%.2n', isset($order->order_total))?></span></span><br>
 <? } ?>				
 						
 					<?	if($billingName){ ?>
