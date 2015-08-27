@@ -49,7 +49,7 @@
 				<h1><?php if($status == 1): ?>Thank You For Your Order<?php else: ?>Your Order Could Not Be Completed.<?php endif; ?></h1>
 		
             <?php if($status == 1): ?>
-  						<h3>Order ID <?=$order->id?></h3><br>
+  						<h3>Order ID <?=$order->getOrderId()?></h3><br>
               <p><?=$trans_status?></p> 
   						<p>Thank you for your order. Please feel free to call us at 1-866-230-7730 with any questions or concerns.</p>  
               <p>Please be sure to save your order number in case you need to inquire about your order in the future.</p> 
@@ -114,3 +114,8 @@
 		<!-- End 2 Col Layout -->
 	<div class="clear large-space"></div>
 	</div>
+<?
+echo "<pre>";
+print_r($order);
+echo "</pre>";
+?>
