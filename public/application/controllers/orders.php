@@ -68,7 +68,7 @@ class Orders_Controller extends My_Template_Controller {
 		// You can assign anything variable to a view by using standard OOP
 		// methods. In my welcome view, the $title variable will be assigned
 		// the value I give it here.
-		$this->template->title = $result[0]->meta_title;
+		$this->template->title = isset($result[0]->meta_title);
 	}
 
 	public function edit() {
