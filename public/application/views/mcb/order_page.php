@@ -88,7 +88,7 @@
 
 </div>
 <? 
-/*
+
 echo "<pre>";
 foreach($orderrsults as $orders){
 print_r($orders);
@@ -96,4 +96,3 @@ print_r($orders);
 echo "-----------";
 print_r($order);
 echo "</pre>";
-*/
